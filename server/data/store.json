@@ -1,0 +1,2823 @@
+{
+  "services": [
+    {
+      "id": "svc-1793947715901",
+      "name": "Qwen-Flash",
+      "serviceId": "qwen-flash",
+      "hosting": "saas",
+      "modality": "对话 / 推理",
+      "protocol": "OpenAI · Chat Completions",
+      "desc": "",
+      "status": "已发布",
+      "strategy": "fixed",
+      "enabled": true,
+      "created": "2026-11-06 14:48:35"
+    },
+    {
+      "id": "svc-1793947713728",
+      "name": "Qwen-Max",
+      "serviceId": "qwen-max",
+      "hosting": "saas",
+      "modality": "对话 / 推理",
+      "protocol": "OpenAI · Chat Completions",
+      "desc": "",
+      "status": "已发布",
+      "strategy": "fixed",
+      "enabled": true,
+      "created": "2026-11-06 14:48:33"
+    },
+    {
+      "id": "svc-1793926765393",
+      "name": "Deepseek-V4.1-Flash",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "hosting": "saas",
+      "modality": "对话 / 推理",
+      "protocol": "OpenAI · Chat Completions",
+      "desc": "",
+      "status": "已发布",
+      "strategy": "fixed",
+      "enabled": true,
+      "created": "2026-11-06 08:59:25"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-1793947717110",
+      "name": "qwen3.8-flash",
+      "serviceRef": "svc-1793947715901",
+      "provider": "世纪互联",
+      "region": "??(??)",
+      "protocol": "OpenAI · Chat Completions",
+      "baseUrl": "https://neolink.com/api/v1",
+      "sourceModel": "qwen3.8-flash",
+      "apiKey": "sk-zobQEUJiWr3EHsjGUrtbkWenvjhvbpt75tm875EYe9dvussG",
+      "status": "运行中",
+      "lastProbe": {
+        "ok": true,
+        "latencyMs": 1469,
+        "method": "chat/completions",
+        "message": "上游连通，模型 qwen3.8-flash 可调用"
+      },
+      "verifiedAt": "2026-11-06 14:50:42",
+      "created": "2026-11-06 14:48:37",
+      "timeout": 30,
+      "concurrency": 500,
+      "retries": 2,
+      "circuit": 5,
+      "healthCheck": "每 30 秒",
+      "prices": {
+        "timePricing": true,
+        "holidaySeparate": false,
+        "discount": "100",
+        "flatInput": "2",
+        "flatOutput": "8",
+        "flatCache": "0.2",
+        "busyInput": "2",
+        "busyOutput": "8",
+        "busyCache": "0.2",
+        "idleInput": "1",
+        "idleOutput": "4",
+        "idleCache": "0.1",
+        "holidayInput": "1",
+        "holidayOutput": "4",
+        "holidayCache": "0.1",
+        "holidayPolicy": "沿用结算价",
+        "holidayPolicyCode": "time",
+        "busyTime": "09:00–22:00",
+        "idleTime": "22:00–09:00",
+        "currency": "CNY · 人民币",
+        "billingUnit": "每 1M Tokens",
+        "priceNote": "不含税，按月结算"
+      },
+      "capabilities": {},
+      "customCapabilities": "",
+      "usedIn": "124",
+      "usedOut": "60",
+      "usedCache": "0",
+      "usedSpend": "0.0008",
+      "callCount": 2,
+      "lastUsed": "2026-11-10 10:23:54",
+      "providerId": "prov-1794454203916-ebd7"
+    },
+    {
+      "id": "src-1793947715897",
+      "name": "qwen3.8-max",
+      "serviceRef": "svc-1793947713728",
+      "provider": "世纪互联",
+      "region": "??(??)",
+      "protocol": "OpenAI · Chat Completions",
+      "baseUrl": "https://neolink.com/api/v1",
+      "sourceModel": "qwen3.8-max",
+      "apiKey": "sk-zobQEUJiWr3EHsjGUrtbkWenvjhvbpt75tm875EYe9dvussG",
+      "status": "运行中",
+      "lastProbe": {
+        "ok": true,
+        "latencyMs": 2114,
+        "method": "chat/completions",
+        "message": "上游连通，模型 qwen3.8-max 可调用"
+      },
+      "verifiedAt": "2026-11-06 14:48:35",
+      "created": "2026-11-06 14:48:35",
+      "timeout": 30,
+      "concurrency": 500,
+      "retries": 2,
+      "circuit": 5,
+      "healthCheck": "每 30 秒",
+      "prices": {
+        "timePricing": true,
+        "holidaySeparate": false,
+        "discount": "100",
+        "flatInput": "2",
+        "flatOutput": "8",
+        "flatCache": "0.2",
+        "busyInput": "2",
+        "busyOutput": "8",
+        "busyCache": "0.2",
+        "idleInput": "1",
+        "idleOutput": "4",
+        "idleCache": "0.1",
+        "holidayInput": "1",
+        "holidayOutput": "4",
+        "holidayCache": "0.1",
+        "holidayPolicy": "沿用结算价",
+        "holidayPolicyCode": "time",
+        "busyTime": "09:00–22:00",
+        "idleTime": "22:00–09:00",
+        "currency": "CNY · 人民币",
+        "billingUnit": "每 1M Tokens",
+        "priceNote": "不含税，按月结算"
+      },
+      "capabilities": {},
+      "customCapabilities": "",
+      "providerId": "prov-1794454203916-ebd7"
+    },
+    {
+      "id": "src-1793927643785",
+      "name": "deepseek-v4.1-flash",
+      "serviceRef": "svc-1793926765393",
+      "provider": "世纪互联",
+      "region": "??(??)",
+      "protocol": "OpenAI · Chat Completions",
+      "baseUrl": "https://neolink.com/api/v1",
+      "sourceModel": "deepseek-v4.1-flash",
+      "apiKey": "sk-zobQEUJiWr3EHsjGUrtbkWenvjhvbpt75tm875EYe9dvussG",
+      "status": "运行中",
+      "lastProbe": {
+        "ok": true,
+        "latencyMs": 1970,
+        "method": "chat/completions",
+        "message": "上游连通，模型 deepseek-v4.1-flash 可调用",
+        "cost": 7e-05,
+        "promptTokens": 31,
+        "completionTokens": 1,
+        "callLogId": "clog-1794535992854-766a03"
+      },
+      "verifiedAt": "2026-11-13 10:13:12",
+      "created": "2026-11-06 09:14:03",
+      "prices": {
+        "timePricing": true,
+        "holidaySeparate": false,
+        "discount": "100",
+        "flatInput": "2",
+        "flatOutput": "8",
+        "flatCache": "0.2",
+        "busyInput": "2",
+        "busyOutput": "8",
+        "busyCache": "0.2",
+        "idleInput": "1",
+        "idleOutput": "4",
+        "idleCache": "0.1",
+        "busyTime": "09:00–22:00",
+        "idleTime": "00:00–09:00、22:00–24:00",
+        "timeSegments": [
+          {
+            "id": "seg-0",
+            "start": "00:00",
+            "end": "09:00",
+            "kind": "idle",
+            "name": "闲时",
+            "input": "1",
+            "output": "4",
+            "cache": "0.1"
+          },
+          {
+            "id": "seg-1",
+            "start": "09:00",
+            "end": "22:00",
+            "kind": "busy",
+            "name": "忙时",
+            "input": "2",
+            "output": "8",
+            "cache": "0.2"
+          },
+          {
+            "id": "seg-2",
+            "start": "22:00",
+            "end": "24:00",
+            "kind": "idle",
+            "name": "闲时",
+            "input": "1",
+            "output": "4",
+            "cache": "0.1"
+          }
+        ],
+        "holidayInput": "1",
+        "holidayOutput": "4",
+        "holidayCache": "0.1",
+        "holidayPolicy": "沿用结算价",
+        "holidayPolicyCode": "time",
+        "currency": "CNY · 人民币",
+        "billingUnit": "每 1M Tokens",
+        "priceNote": "不含税，按月结算",
+        "tieredPricing": false,
+        "spendTiers": []
+      },
+      "capabilities": {
+        "文本输入": "supported",
+        "图片输入": "unsupported",
+        "音频输入": "unsupported",
+        "视频输入": "unsupported",
+        "文件输入": "unsupported",
+        "文本输出": "supported",
+        "图片生成": "unsupported",
+        "语音输出": "unsupported",
+        "视频生成": "unsupported",
+        "流式输出": "supported",
+        "深度思考 / 推理": "supported",
+        "工具 / Function Calling": "supported",
+        "JSON 结构化输出": "supported",
+        "Logprobs": "limited",
+        "上下文缓存": "limited",
+        "批量推理": "limited",
+        "Embedding 向量化": "unsupported",
+        "Rerank 重排序": "unsupported",
+        "模型微调": "limited",
+        "系统提示词": "supported"
+      },
+      "customCapabilities": "",
+      "timeout": 30,
+      "concurrency": 500,
+      "retries": 2,
+      "circuit": 5,
+      "healthCheck": "每 30 秒",
+      "usedIn": "66520",
+      "usedOut": "9611",
+      "usedCache": "37376",
+      "usedSpend": "0.1426",
+      "callCount": 13,
+      "lastUsed": "2026-11-13 10:13:12",
+      "providerId": "prov-1794454203916-ebd7"
+    },
+    {
+      "id": "src-1793927047458",
+      "name": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "provider": "阿里云",
+      "region": "华东（上海）",
+      "protocol": "OpenAI · Chat Completions",
+      "baseUrl": "https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "sourceModel": "deepseek-v4.1-flash-1017",
+      "apiKey": "sk-ws-H.YRLLYXL.7lG4.MEQCIH133ckLYU3bGVYFWqj1VfVtAL77yg_CotjRwxetFkGLAiAAwEvKj1Ruus6MHtTxbn1ZIBPFczypD7aFTbo5rWs6zQ",
+      "status": "运行中",
+      "lastProbe": {
+        "ok": true,
+        "latencyMs": 708,
+        "method": "chat/completions",
+        "message": "上游连通，模型 deepseek-v4.1-flash-1017 可调用"
+      },
+      "verifiedAt": "2026-11-06 09:04:07",
+      "created": "2026-11-06 09:04:07",
+      "prices": {
+        "timePricing": true,
+        "holidaySeparate": false,
+        "discount": "100",
+        "flatInput": "2",
+        "flatOutput": "8",
+        "flatCache": "0.2",
+        "busyInput": "2",
+        "busyOutput": "8",
+        "busyCache": "0.2",
+        "idleInput": "1",
+        "idleOutput": "4",
+        "idleCache": "0.1",
+        "busyTime": "09:00–22:00",
+        "idleTime": "00:00–09:00、22:00–24:00",
+        "timeSegments": [
+          {
+            "id": "seg-0",
+            "start": "00:00",
+            "end": "09:00",
+            "kind": "idle",
+            "name": "闲时",
+            "input": "1",
+            "output": "4",
+            "cache": "0.1"
+          },
+          {
+            "id": "seg-1",
+            "start": "09:00",
+            "end": "22:00",
+            "kind": "busy",
+            "name": "忙时",
+            "input": "2",
+            "output": "8",
+            "cache": "0.2"
+          },
+          {
+            "id": "seg-2",
+            "start": "22:00",
+            "end": "24:00",
+            "kind": "idle",
+            "name": "闲时",
+            "input": "1",
+            "output": "4",
+            "cache": "0.1"
+          }
+        ],
+        "holidayInput": "1",
+        "holidayOutput": "4",
+        "holidayCache": "0.1",
+        "holidayPolicy": "沿用结算价",
+        "holidayPolicyCode": "time",
+        "currency": "CNY · 人民币",
+        "billingUnit": "每 1M Tokens",
+        "priceNote": "",
+        "tieredPricing": false,
+        "spendTiers": []
+      },
+      "capabilities": {
+        "input:text": "supported",
+        "input:image": "supported",
+        "input:audio": "unsupported",
+        "input:video": "unsupported",
+        "input:file": "unsupported",
+        "output:text": "supported",
+        "output:image": "unsupported",
+        "output:video": "unsupported",
+        "output:audio": "unsupported",
+        "output:speech": "unsupported",
+        "output:transcription": "unsupported",
+        "output:embeddings": "unsupported",
+        "output:rerank": "unsupported",
+        "output:decisions": "unsupported"
+      },
+      "customCapabilities": "",
+      "timeout": 30,
+      "concurrency": 500,
+      "retries": 2,
+      "circuit": 5,
+      "healthCheck": "每 30 秒",
+      "providerId": "prov-1794454203943-c57f"
+    }
+  ],
+  "keys": [
+    {
+      "id": "key-1794362971322",
+      "type": "api",
+      "keyKind": "app",
+      "platformRole": "ops-assistant",
+      "name": "运维助手",
+      "secret": "ak_live_b4b25235751e051726ac7559c108a852",
+      "mask": "ak_live_••••A852",
+      "owner": "平台",
+      "ownerMemberId": "",
+      "orgLevel": "platform",
+      "orgId": "platform",
+      "orgName": "平台运维",
+      "billingDept": "平台运维",
+      "serviceRefs": [
+        "svc-1793947715901",
+        "svc-1793947713728",
+        "svc-1793926765393"
+      ],
+      "limitMode": "both",
+      "window": "每天",
+      "maxInTokens": "",
+      "maxOutTokens": "",
+      "maxSpend": "",
+      "overLimit": "立即拒绝并返回 429",
+      "expirePreset": "never",
+      "expiresAt": "",
+      "requireAppId": false,
+      "appId": "",
+      "usedIn": "28546",
+      "usedOut": "9503",
+      "usedCache": "0",
+      "usedSpend": "0.1331",
+      "status": "健康",
+      "env": "prod",
+      "created": "2026-11-11 10:09:31",
+      "rotated": "—",
+      "lastUsed": "2026-11-12 14:40:56"
+    },
+    {
+      "id": "key-1794277390752",
+      "type": "api",
+      "keyKind": "app",
+      "name": "appid-e2e2",
+      "secret": "ak_live_e2bf995337398e3c5b5bc37e74d9d435",
+      "mask": "ak_live_••••D435",
+      "owner": "",
+      "ownerMemberId": "",
+      "orgLevel": "dept",
+      "orgId": "",
+      "orgName": "",
+      "billingDept": "",
+      "serviceRefs": [
+        "svc-1793947715901",
+        "svc-1793947713728",
+        "svc-1793926765393"
+      ],
+      "limitMode": "both",
+      "window": "每天",
+      "maxInTokens": "",
+      "maxOutTokens": "",
+      "maxSpend": "",
+      "overLimit": "立即拒绝并返回 429",
+      "expirePreset": "never",
+      "expiresAt": "",
+      "usedIn": "0",
+      "usedOut": "0",
+      "usedCache": "0",
+      "usedSpend": "0.00",
+      "status": "健康",
+      "env": "prod",
+      "created": "2026-11-10 10:23:10",
+      "rotated": "—",
+      "lastUsed": "—"
+    },
+    {
+      "id": "key-1793933828700",
+      "type": "api",
+      "keyKind": "app",
+      "name": "测试",
+      "secret": "ak_live_b8f9ffcbe637bcb8a1d3427f3602ebc0",
+      "mask": "ak_live_••••EBC0",
+      "owner": "李晨测试",
+      "ownerMemberId": "m-lichen",
+      "orgLevel": "dept",
+      "orgId": "客户服务",
+      "orgName": "客户服务",
+      "billingDept": "客户服务",
+      "serviceRefs": [
+        "svc-1793926765393",
+        "svc-1793947713728",
+        "svc-1793947715901"
+      ],
+      "limitMode": "both",
+      "window": "每天",
+      "maxInTokens": "5000000",
+      "maxOutTokens": "2000000",
+      "maxSpend": "2000",
+      "overLimit": "立即拒绝并返回 429",
+      "expirePreset": "365d",
+      "expiresAt": "2027-11-06 23:59:59",
+      "usedIn": "37909",
+      "usedOut": "75",
+      "usedSpend": "0.0091",
+      "status": "健康",
+      "env": "prod",
+      "created": "2026-11-06 10:57:08",
+      "rotated": "—",
+      "lastUsed": "2026-11-06 11:13:09",
+      "usedCache": "37376"
+    }
+  ],
+  "callLogs": [
+    {
+      "id": "clog-1794535992854-766a03",
+      "audience": "probe",
+      "env": "prod",
+      "keyId": "",
+      "keyName": "连通性探测",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "probe",
+      "purpose": "upstream_connectivity_probe",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "probe",
+      "route": "/admin/sources/probe",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 31,
+      "completionTokens": 1,
+      "cachedTokens": 0,
+      "totalTokens": 32,
+      "cost": 7e-05,
+      "latencyMs": 1970,
+      "failoverAttempts": [],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "ping"
+          }
+        ],
+        "max_tokens": 1,
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "",
+              "reasoning_content": "The",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794535992,
+        "id": "02179453599176409fb6d9bae00304bb74f776328be18e9577f1e",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prompt_tokens": 31,
+          "total_tokens": 32,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1
+          }
+        }
+      },
+      "files": [],
+      "time": "2026-11-13 10:13:12"
+    },
+    {
+      "id": "clog-1794465656347-ce584d",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 3592,
+      "completionTokens": 1246,
+      "cachedTokens": 0,
+      "totalTokens": 4838,
+      "cost": 0.017152,
+      "latencyMs": 10546,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导从已接入服务商中选择后开票。以阿里云为例对接本机开票 API / MCP。\n供应商口径（必须遵守）：\n1) 开票「供应商」=「源模型能力接入」里配置的服务商（快照 providers）。接入源模型时已写入，不必再单独登记供应商。\n2) 用户可在边栏直接选择已接入服务商；快照 selectedSupplierId / selectedSupplier 为当前选择。\n3) 未出现在源模型能力接入中的服务商不可开票；不要引导用户去新建另一套供应商库。\n4) 真正提交 create-invoice 前，阿里云还需抬头/收件邮箱/BSS AK（invoiceReady）；缺资料时说明补全字段即可，不要说「还没添加供应商」。\n开票要点：\n- supplierId 使用网关 provider id（与所选服务商相同）。\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":true,\"status\":200,\"at\":\"2026-11-12 14:40:31\",\"data\":{\"status\":\"ok\",\"service\":\"mcpserver-local-api\"}},\"generatedAt\":\"2026-11-12 14:40:45\",\"activeAgent\":\"invoice\",\"supplierRule\":\"开票供应商列表 =「源模型能力接入」已配置的服务商（providers）；已接入即可直接选择，无需另建供应商库\",\"selectedSupplierId\":\"prov-1794454203943-c57f\",\"selectedSupplier\":{\"id\":\"prov-1794454203943-c57f\",\"name\":\"阿里云\",\"vendor\":\"aliyun\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"sourceCount\":1,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"},\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"svc-1793947715901\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.1253\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793926765393\"}],\"providers\":[{\"id\":\"prov-1794454203943-c57f\",\"name\":\"阿里云\",\"vendor\":\"aliyun\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"sourceCount\":1,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"},{\"id\":\"prov-1794454203916-ebd7\",\"name\":\"世纪互联\",\"vendor\":\"other\",\"baseUrl\":\"https://neolink.com/api/v1\",\"sourceCount\":3,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.1159\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-12 14:35:43\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":4164,\"completionTokens\":741,\"cost\":0.014256,\"latencyMs\":5529},{\"time\":\"2026-11-12 11:42:23\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3329,\"completionTokens\":1071,\"cost\":0.015226,\"latencyMs\":7418},{\"time\":\"2026-11-12 11:40:16\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3237,\"completionTokens\":1766,\"cost\":0.020602,\"latencyMs\":11801},{\"time\":\"2026-11-12 11:39:02\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":35,\"completionTokens\":82,\"cost\":0.000726,\"latencyMs\":2050},{\"time\":\"2026-11-12 11:38:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":34,\"completionTokens\":8,\"cost\":0.000132,\"latencyMs\":1326},{\"time\":\"2026-11-12 11:33:29\",\"status\":502,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":0,\"completionTokens\":0,\"cost\":0,\"latencyMs\":906},{\"time\":\"2026-11-12 11:14:42\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":4663,\"completionTokens\":750,\"cost\":0.015326,\"latencyMs\":8191},{\"time\":\"2026-11-12 11:06:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3964,\"completionTokens\":733,\"cost\":0.013792,\"latencyMs\":6468},{\"time\":\"2026-11-12 11:06:26\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2913,\"completionTokens\":1185,\"cost\":0.015306,\"latencyMs\":11573},{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":88,\"inTokens\":0.06302100000000001,\"outTokens\":0.008424000000000001,\"cost\":0.126157,\"rowCount\":8},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"24954\",\"usedOut\":\"8257\",\"usedSpend\":\"0.1159\"}}"
+          },
+          {
+            "role": "user",
+            "content": "开票"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 一、当前可开票的服务商（来自「源模型能力接入」providers）\n\n| 服务商 | providerId | vendor | 接入源数 | 开票就绪 |\n|---|---|---|---|---|\n| 阿里云 | `prov-1794454203943-c57f` | aliyun | 1 | ❌ invoiceReady=false，未填抬头 |\n| 世纪互联 | `prov-1794454203916-ebd7` | other | 3 | ❌ invoiceReady=false，未填抬头 |\n\n两家都已接入，**可直接在边栏选择，无需另建供应商库**。其它未出现在此表里的服务商不可开票。\n\n## 二、阿里云（当前选中）还缺的资料\n\n`invoiceReady=false`，`invoiceTitleId` 为空，说明只有「接入」完成，「开票资料」未齐。需要在阿里云这一行的开票配置里补全：\n\n1. **InvoiceTitleId**：先调 `ListInvoiceTitle` 拉取抬头列表，选中一条回填（不要手填 ID）。\n2. **收件邮箱**：发票接收邮箱。\n3. **BSS AccessKey**：阿里云账号的 BSS OpenAPI 凭证。⚠️ 请在控制台凭证区填写，**不要贴在对话里**；平台侧对接使用虚拟 Key。\n\n补齐后 `invoiceReady` 变 true 才能提交 `create-invoice`。\n\n## 三、金额参考（以控制台账单为准，勿以日志为准）\n\n- 阿里云源 `src-1793927047458`（deepseek-v4.1-flash-1017）：**usedSpend 0.00**\n- 世纪互联 3 个源合计：0.0008 + 0.00 + 0.1253 ≈ **0.1261**\n- 网关整体：请求 88 次，费用 0.126157\n\n即：**按当前快照，阿里云侧可开票金额为 0**，实际开票金额请到控制台账单/计费页核对后再确认。\n\n## 四、提交字段示例（核对用，我不会替你真实提交）\n\n```json\n{\n  \"SupplierId\": \"prov-1794454203943-c57f\",\n  \"InvoiceType\": 0,\n  \"InvoiceMode\": 1,\n  \"InvoiceTitleId\": \"<ListInvoiceTitle 返回的抬头 ID>\",\n  \"InvoiceCandidateIds\": [\"<ListInvoiceCandidate 返回的候选账单 ID>\"]\n}\n```\n- `InvoiceType`：0 数电普票 / 1 数电专票\n- `InvoiceMode`：0 独立开票 / 1 合并开票\n- **跨账号独立开票时不要传 Amount**（Amount 可省略）\n\n## 五、操作顺序\n\n1. 边栏选中「阿里云」→ 开票配置补抬头 / 邮箱 / BSS AK → 确认 `invoiceReady=true`\n2. `ListInvoiceCandidate` 查可开票账单 → 勾选候选\n3. `ListInvoiceTitle` 确认抬头 ID\n4. 确认控制台「开票申请」状态为未提交/可提交\n5. 按上面字段提交 create-invoice\n\n补充：本地开票 API 健康检查正常（`http://127.0.0.1:3000` → status ok），无需再启动服务。\n\n需要我针对世纪互联（金额 0.1261，有实际消费）也列一份同样的核对清单吗？",
+              "reasoning_content": "用户说\"开票\"。需要基于快照给出开票指导。当前快照：选中供应商阿里云 prov-1794454203943-c57f，invoiceReady=false，invoiceTitleId 为空。invoiceApiHealth.ok=true。\n\n需要说明：可开票服务商只有阿里云和世纪互联（都在 providers 里）。阿里云当前未就绪，需补全抬头/收件邮箱/BSS AK。\n\n金额方面：快照里有的用量数据。阿里云 source 的 usedSpend 为 0.00（src-1793927047458），最近调用日志里 deepseek-v4.1-flash-1017 服务有费用，但那个服务对应两个源（世纪互联 deepseek-v4.1-flash 0.1253 和阿里云 deepseek-v4.1-flash-1017 0.00）。所以阿里云可开票金额目前快照显示 0.00。总量 cost 0.126157，大部分归属世纪互联。\n\n需要提醒：跨账号独立开票不要传 Amount；金额以控制台账单为准。\n\n给出核对清单与字段示例。\n\n注意不要编造。阿里云 invoiceReady=false，需要补：发票抬头（InvoiceTitleId，从 ListInvoiceTitle 获取）、收件邮箱、BSS AccessKey（平台侧虚拟凭证，不要粘贴真实上游密钥——嗯，BSS AK 是阿里云账号的，需要用户在控制台填写，但不能在对话里让用户粘贴真实密钥；应提示在控制台凭证区填写）。\n\n另外可以提示：先用 ListInvoiceTitle / ListInvoiceCandidate 拉取数据。\n\n结构：1) 当前可开票服务商；2) 阿里云现状与缺项；3) 金额参考；4) 提交字段示例；5) 步骤。\n\n金额：阿里云源 usedSpend 0.00；世纪互联 0.0008+0.00+0.1253=0.1261。注意 usageBrief cost 0.126157 是整个网关的。可以给出这些。\n\n要说清：阿里云已接入但未就绪（invoiceReady=false），不是\"没添加供应商\"。\n\n字段示例给 JSON。\n\n另外提醒本地开票 API 健康 ok=true（http://127.0.0.1:3000）。\n\n写吧。简洁。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794465656,
+        "id": "02179446564606709fb6d9bae00304bb74f776328be18e9282255",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1246,
+          "prompt_tokens": 3592,
+          "total_tokens": 4838,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 491
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 14:40:56"
+    },
+    {
+      "id": "clog-1794465343194-c067b9",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 4164,
+      "completionTokens": 741,
+      "cachedTokens": 0,
+      "totalTokens": 4905,
+      "cost": 0.014256,
+      "latencyMs": 5529,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 供应商列表同步自模型网关「源模型能力接入」；在那里接入阿里云源模型后即产生供应商。\n2) 开票前为该供应商补全 invoice 资料（抬头/邮箱/BSS AK）：PATCH 网关 providers 或 MCP create-invoice-supplier（传 providerId）。\n3) 开票时优先选择供应商（supplierId=网关 provider id），再传 InvoiceCandidateIds 与可选 Amount。\n4) 未在源模型接入中出现的供应商不可开票。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:33:22\"},\"generatedAt\":\"2026-11-12 14:35:37\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"svc-1793947715901\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.1110\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793926765393\"}],\"providers\":[{\"id\":\"prov-1794454203943-c57f\",\"name\":\"阿里云\",\"vendor\":\"aliyun\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"sourceCount\":1,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"},{\"id\":\"prov-1794454203916-ebd7\",\"name\":\"世纪互联\",\"vendor\":\"other\",\"baseUrl\":\"https://neolink.com/api/v1\",\"sourceCount\":3,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.1016\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-12 11:42:23\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3329,\"completionTokens\":1071,\"cost\":0.015226,\"latencyMs\":7418},{\"time\":\"2026-11-12 11:40:16\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3237,\"completionTokens\":1766,\"cost\":0.020602,\"latencyMs\":11801},{\"time\":\"2026-11-12 11:39:02\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":35,\"completionTokens\":82,\"cost\":0.000726,\"latencyMs\":2050},{\"time\":\"2026-11-12 11:38:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":34,\"completionTokens\":8,\"cost\":0.000132,\"latencyMs\":1326},{\"time\":\"2026-11-12 11:33:29\",\"status\":502,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":0,\"completionTokens\":0,\"cost\":0,\"latencyMs\":906},{\"time\":\"2026-11-12 11:14:42\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":4663,\"completionTokens\":750,\"cost\":0.015326,\"latencyMs\":8191},{\"time\":\"2026-11-12 11:06:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3964,\"completionTokens\":733,\"cost\":0.013792,\"latencyMs\":6468},{\"time\":\"2026-11-12 11:06:26\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2913,\"completionTokens\":1185,\"cost\":0.015306,\"latencyMs\":11573},{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":87,\"inTokens\":0.05885699999999999,\"outTokens\":0.007683000000000001,\"cost\":0.111901,\"rowCount\":8},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"20790\",\"usedOut\":\"7516\",\"usedSpend\":\"0.1016\"}}"
+          },
+          {
+            "role": "user",
+            "content": "开票"
+          },
+          {
+            "role": "assistant",
+            "content": "## 开票前置检查（基于当前平台快照）\n\n**1）本地开票 API 当前不可用** ⚠️\n- `invoiceApiHealth.ok = false`（2026-11-12 11:33，Failed to fetch）\n- 需要先启动本机 mcpserver 开票 API（默认 `http://127.0.0.1:3000`），否则 `ListInvoiceTitle` / `ListInvoiceCandidate` / 提交开票都会失败。\n\n**2）可开票供应商（来自「源模型能力接入」）**\n\n| 供应商 | providerId | 源模型数 | invoiceReady | 状态 |\n|---|---|---|---|---|\n| 阿里云 | `prov-1794454203943-c57f` | 1 | ❌ false | 运行中 |\n| 世纪互联 | `prov-1794454203916-ebd7` | 3 | ❌ false | 运行中 |\n\n两个供应商都**未补全 invoice 资料**，现在直接开票会被拒。未在源模型接入中出现的供应商不可开票。\n\n---\n\n## 建议操作顺序\n\n**第 1 步：启动开票 API**\n启动后刷新控制台，确认健康检查变 `ok=true`。\n\n**第 2 步：补全供应商 invoice 资料（以阿里云为例）**\n- 方式 A：网关 PATCH providers\n- 方式 B：MCP `create-invoice-supplier`，传 `providerId=prov-1794454203943-c57f`\n\n需准备字段（**不要粘贴上游真实密钥给对话**，平台侧用虚拟 Key / 由运维在控制台填写）：\n```json\n{\n  \"providerId\": \"prov-1794454203943-c57f\",\n  \"invoiceTitle\": \"发票抬头\",\n  \"invoiceEmail\": \"收票邮箱\",\n  \"bssAk\": \"<由运维在控制台安全填写>\"\n}\n```\n完成后确认该供应商 `invoiceReady=true`、`invoiceTitleId` 非空。\n\n**第 3 步：取发票抬头与候选账单**\n- `InvoiceTitleId` ← `ListInvoiceTitle`\n- `InvoiceCandidateIds` ← `ListInvoiceCandidate`（可开票金额以此接口为准）\n\n> 快照中阿里云源 `usedSpend = 0.00`，世纪互联合计约 `0.0966`；但这只是消费展示值，**不能当作可开票金额**，请以 ListInvoiceCandidate 返回为准。\n\n**第 4 步：提交开票参数示例（核对用，不代提交）**\n```json\n{\n  \"SupplierId\": \"prov-1794454203943-c57f\",\n  \"InvoiceTitleId\": \"<ListInvoiceTitle 返回>\",\n  \"InvoiceCandidateIds\": [\"<ListInvoiceCandidate 返回>\"],\n  \"InvoiceType\": 0,\n  \"InvoiceMode\": 0\n}\n```\n- `InvoiceType`：0 = 数电普票，1 = 数电专票\n- `InvoiceMode`：0 = 独立开票，1 = 合并开票\n- **跨账号独立开票时不要传 `Amount`**；如确需指定金额，再补 `Amount`。\n\n---\n\n## 需要你确认\n1. 本次开哪家供应商：阿里云 / 世纪互联，还是两家分别开？\n2. 普票还是专票？独立开票还是合并开票？\n3. 开票 API 是否已启动、`invoiceReady` 是否已置为 true？\n\n确认后请到控制台核对申请状态；我这边只提供清单与字段示例，不代替提交真实开票。"
+          },
+          {
+            "role": "user",
+            "content": "开阿里云的"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 开阿里云发票：当前还差 3 步\n\n阿里云供应商信息：`providerId = prov-1794454203943-c57f`，`invoiceReady = false`，`invoiceTitleId` 为空 → **现在提交必被拒**。\n\n### 第 1 步：启动本地开票 API\n快照显示 `invoiceApiHealth.ok = false`（Failed to fetch）。\n先启动 mcpserver 开票 API（`http://127.0.0.1:3000`），再回到控制台刷新，确认健康检查变为 ok。\n\n### 第 2 步：补全阿里云 invoice 资料\n二选一：\n- 网关 PATCH `providers/prov-1794454203943-c57f`\n- MCP `create-invoice-supplier`，传 `providerId=prov-1794454203943-c57f`\n\n字段示例（**BSS AK 请在控制台由运维安全填写，不要发到对话里**）：\n```json\n{\n  \"providerId\": \"prov-1794454203943-c57f\",\n  \"invoiceTitle\": \"发票抬头\",\n  \"invoiceEmail\": \"收票邮箱\",\n  \"bssAk\": \"<控制台安全填写>\"\n}\n```\n补全后核对：该供应商 `invoiceReady = true`，且 `invoiceTitleId` 非空。\n\n### 第 3 步：取抬头与候选账单\n- `InvoiceTitleId` ← `ListInvoiceTitle`\n- `InvoiceCandidateIds` ← `ListInvoiceCandidate`（可开票金额只认这个接口）\n\n⚠️ 快照里阿里云源 `usedSpend = 0.00`（仅 1 个源模型 `deepseek-v4.1-flash-1017`）。这个数是消费展示值，不代表可开票金额；如果 `ListInvoiceCandidate` 返回为空或金额为 0，说明阿里云这条链路暂无已出账金额，需要先有实际消费或等账单出账。\n\n### 提交前核对清单\n```json\n{\n  \"SupplierId\": \"prov-1794454203943-c57f\",\n  \"InvoiceTitleId\": \"<ListInvoiceTitle 返回>\",\n  \"InvoiceCandidateIds\": [\"<ListInvoiceCandidate 返回>\"],\n  \"InvoiceType\": 0,\n  \"InvoiceMode\": 0\n}\n```\n- `InvoiceType`：本次要普票填 0，专票填 1\n- `InvoiceMode`：单笔开填 0，合并开填 1\n- 跨账号独立开票时**不传 `Amount`**\n\n---\n\n请确认两点，我再给你对应的最终参数：\n1. 普票还是专票？\n2. 独立开票还是合并开票？\n\n另外提醒：我无法代你在对话里提交真实开票，请在上面两步完成后到控制台核对申请状态再提交。",
+              "reasoning_content": "用户要开阿里云。需要基于快照给出指导。阿里云 invoiceReady=false，API 不可用。需要先补全资料，再开票。\n\n不能编造 invoiceTitleId、candidateIds。需要提醒去核对。\n\n给出具体分步操作：启动 API → PATCH providers 补全 → ListInvoiceTitle → ListInvoiceCandidate → 提交参数。\n\n可用阿里云的 providerId: prov-1794454203943-c57f。\n\n注意 usedSpend 阿里云 0.00，可能无可开票金额。要提醒。\n\n保持简洁。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794465343,
+        "id": "02179446533834309fb6d9bae00304bb74f776328be18e99093d4",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 741,
+          "prompt_tokens": 4164,
+          "total_tokens": 4905,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 119
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 14:35:43"
+    },
+    {
+      "id": "clog-1794454943443-e7f8a8",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 3329,
+      "completionTokens": 1071,
+      "cachedTokens": 0,
+      "totalTokens": 4400,
+      "cost": 0.015226,
+      "latencyMs": 7418,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 供应商列表同步自模型网关「源模型能力接入」；在那里接入阿里云源模型后即产生供应商。\n2) 开票前为该供应商补全 invoice 资料（抬头/邮箱/BSS AK）：PATCH 网关 providers 或 MCP create-invoice-supplier（传 providerId）。\n3) 开票时优先选择供应商（supplierId=网关 provider id），再传 InvoiceCandidateIds 与可选 Amount。\n4) 未在源模型接入中出现的供应商不可开票。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:33:22\"},\"generatedAt\":\"2026-11-12 11:42:15\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"svc-1793947715901\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0958\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793926765393\"}],\"providers\":[{\"id\":\"prov-1794454203943-c57f\",\"name\":\"阿里云\",\"vendor\":\"aliyun\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"sourceCount\":1,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"},{\"id\":\"prov-1794454203916-ebd7\",\"name\":\"世纪互联\",\"vendor\":\"other\",\"baseUrl\":\"https://neolink.com/api/v1\",\"sourceCount\":3,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0864\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-12 11:40:16\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3237,\"completionTokens\":1766,\"cost\":0.020602,\"latencyMs\":11801},{\"time\":\"2026-11-12 11:39:02\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":35,\"completionTokens\":82,\"cost\":0.000726,\"latencyMs\":2050},{\"time\":\"2026-11-12 11:38:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":34,\"completionTokens\":8,\"cost\":0.000132,\"latencyMs\":1326},{\"time\":\"2026-11-12 11:33:29\",\"status\":502,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":0,\"completionTokens\":0,\"cost\":0,\"latencyMs\":906},{\"time\":\"2026-11-12 11:14:42\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":4663,\"completionTokens\":750,\"cost\":0.015326,\"latencyMs\":8191},{\"time\":\"2026-11-12 11:06:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3964,\"completionTokens\":733,\"cost\":0.013792,\"latencyMs\":6468},{\"time\":\"2026-11-12 11:06:26\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2913,\"completionTokens\":1185,\"cost\":0.015306,\"latencyMs\":11573},{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":86,\"inTokens\":0.055527999999999994,\"outTokens\":0.006612000000000001,\"cost\":0.096675,\"rowCount\":8},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"17461\",\"usedOut\":\"6445\",\"usedSpend\":\"0.0864\"}}"
+          },
+          {
+            "role": "user",
+            "content": "开票"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 开票前置检查（基于当前平台快照）\n\n**1）本地开票 API 当前不可用** ⚠️\n- `invoiceApiHealth.ok = false`（2026-11-12 11:33，Failed to fetch）\n- 需要先启动本机 mcpserver 开票 API（默认 `http://127.0.0.1:3000`），否则 `ListInvoiceTitle` / `ListInvoiceCandidate` / 提交开票都会失败。\n\n**2）可开票供应商（来自「源模型能力接入」）**\n\n| 供应商 | providerId | 源模型数 | invoiceReady | 状态 |\n|---|---|---|---|---|\n| 阿里云 | `prov-1794454203943-c57f` | 1 | ❌ false | 运行中 |\n| 世纪互联 | `prov-1794454203916-ebd7` | 3 | ❌ false | 运行中 |\n\n两个供应商都**未补全 invoice 资料**，现在直接开票会被拒。未在源模型接入中出现的供应商不可开票。\n\n---\n\n## 建议操作顺序\n\n**第 1 步：启动开票 API**\n启动后刷新控制台，确认健康检查变 `ok=true`。\n\n**第 2 步：补全供应商 invoice 资料（以阿里云为例）**\n- 方式 A：网关 PATCH providers\n- 方式 B：MCP `create-invoice-supplier`，传 `providerId=prov-1794454203943-c57f`\n\n需准备字段（**不要粘贴上游真实密钥给对话**，平台侧用虚拟 Key / 由运维在控制台填写）：\n```json\n{\n  \"providerId\": \"prov-1794454203943-c57f\",\n  \"invoiceTitle\": \"发票抬头\",\n  \"invoiceEmail\": \"收票邮箱\",\n  \"bssAk\": \"<由运维在控制台安全填写>\"\n}\n```\n完成后确认该供应商 `invoiceReady=true`、`invoiceTitleId` 非空。\n\n**第 3 步：取发票抬头与候选账单**\n- `InvoiceTitleId` ← `ListInvoiceTitle`\n- `InvoiceCandidateIds` ← `ListInvoiceCandidate`（可开票金额以此接口为准）\n\n> 快照中阿里云源 `usedSpend = 0.00`，世纪互联合计约 `0.0966`；但这只是消费展示值，**不能当作可开票金额**，请以 ListInvoiceCandidate 返回为准。\n\n**第 4 步：提交开票参数示例（核对用，不代提交）**\n```json\n{\n  \"SupplierId\": \"prov-1794454203943-c57f\",\n  \"InvoiceTitleId\": \"<ListInvoiceTitle 返回>\",\n  \"InvoiceCandidateIds\": [\"<ListInvoiceCandidate 返回>\"],\n  \"InvoiceType\": 0,\n  \"InvoiceMode\": 0\n}\n```\n- `InvoiceType`：0 = 数电普票，1 = 数电专票\n- `InvoiceMode`：0 = 独立开票，1 = 合并开票\n- **跨账号独立开票时不要传 `Amount`**；如确需指定金额，再补 `Amount`。\n\n---\n\n## 需要你确认\n1. 本次开哪家供应商：阿里云 / 世纪互联，还是两家分别开？\n2. 普票还是专票？独立开票还是合并开票？\n3. 开票 API 是否已启动、`invoiceReady` 是否已置为 true？\n\n确认后请到控制台核对申请状态；我这边只提供清单与字段示例，不代替提交真实开票。",
+              "reasoning_content": "用户只说「开票」。需要基于快照给出核对清单与操作指引。关键点：invoiceApiHealth.ok=false，需先启动 mcpserver API。供应商：阿里云（invoiceReady=false）、世纪互联（false）。阿里云有 source（deepseek-v4.1-flash-1017），可开票。需先补全 invoice 资料。\n\n给出分步：1 启动本地开票 API；2 确认供应商来源于源模型接入；3 补全 invoice 资料（抬头/邮箱/BSS AK）— PATCH providers 或 MCP create-invoice-supplier，传 providerId=prov-1794454203943-c57f；4 用 ListInvoiceTitle / ListInvoiceCandidate 获取 ID；5 提交开票参数示例，不要传 Amount（跨账号独立开票）；6 提醒确认控制台申请状态。\n\n可给出 curl/PATCH 示例，注意不要要求真实密钥。可给出候选可开票金额来源：usedSpend 等，但快照中阿里云 usedSpend 0.00（source 层面）。世纪互联 0.0958+0.0008。应该说明可开票金额需以 ListInvoiceCandidate 为准，快照里阿里云源 usedSpend=0.00，暂无可确认金额。\n\n需要简洁中文分步。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794454943,
+        "id": "02179445493630409fb6d9bae00304bb74f776328be18e9ee5bf4",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1071,
+          "prompt_tokens": 3329,
+          "total_tokens": 4400,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 282
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:42:23"
+    },
+    {
+      "id": "clog-1794454816091-2db81f",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 3237,
+      "completionTokens": 1766,
+      "cachedTokens": 0,
+      "totalTokens": 5003,
+      "cost": 0.020602,
+      "latencyMs": 11801,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 供应商列表同步自模型网关「源模型能力接入」；在那里接入阿里云源模型后即产生供应商。\n2) 开票前为该供应商补全 invoice 资料（抬头/邮箱/BSS AK）：PATCH 网关 providers 或 MCP create-invoice-supplier（传 providerId）。\n3) 开票时优先选择供应商（supplierId=网关 provider id），再传 InvoiceCandidateIds 与可选 Amount。\n4) 未在源模型接入中出现的供应商不可开票。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:33:22\"},\"generatedAt\":\"2026-11-12 11:40:04\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0744\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947715901\"}],\"providers\":[{\"id\":\"prov-1794454203943-c57f\",\"name\":\"阿里云\",\"vendor\":\"aliyun\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"sourceCount\":1,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"},{\"id\":\"prov-1794454203916-ebd7\",\"name\":\"世纪互联\",\"vendor\":\"other\",\"baseUrl\":\"https://neolink.com/api/v1\",\"sourceCount\":3,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0650\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-12 11:14:42\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":4663,\"completionTokens\":750,\"cost\":0.015326,\"latencyMs\":8191},{\"time\":\"2026-11-12 11:06:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3964,\"completionTokens\":733,\"cost\":0.013792,\"latencyMs\":6468},{\"time\":\"2026-11-12 11:06:26\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2913,\"completionTokens\":1185,\"cost\":0.015306,\"latencyMs\":11573},{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:59\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:58\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":82,\"inTokens\":0.052222,\"outTokens\":0.004756,\"cost\":0.07521499999999999,\"rowCount\":8},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"14155\",\"usedOut\":\"4589\",\"usedSpend\":\"0.0650\"}}"
+          },
+          {
+            "role": "user",
+            "content": "按「源模型接入产生供应商 → 补全 invoice 资料 → create-invoice」说明步骤与必填字段"
+          },
+          {
+            "role": "assistant",
+            "content": "调用失败：upstream request failed: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)"
+          },
+          {
+            "role": "user",
+            "content": "开票"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 当前状态：暂不能提交开票（两个前置条件未满足）\n\n依据 2026-11-12 11:40 的平台快照：\n\n| 检查项 | 状态 |\n|---|---|\n| 本地开票 API `http://127.0.0.1:3000` | ❌ `ok=false`（Failed to fetch，11-12 11:33） |\n| 供应商「阿里云」 `prov-1794454203943-c57f` | ❌ `invoiceReady=false`，`invoiceTitleId` 为空 |\n| 供应商「世纪互联」 `prov-1794454203916-ebd7` | ❌ `invoiceReady=false`，`invoiceTitleId` 为空 |\n\n因此，现在即使给出参数也无法提交开票单，需要先完成下面 4 步。\n\n---\n\n## 第 1 步：先启动本地开票 API\n\n快照里 `invoiceApiHealth.ok=false`。请先在本机启动 mcpserver 开票服务（默认 `127.0.0.1:3000`），待健康探测恢复 `ok=true` 后再继续。否则 `ListInvoiceTitle`、`ListInvoiceCandidate` 都取不到数据。\n\n## 第 2 步：确认供应商来自「源模型能力接入」\n\n供应商列表同步自网关的「源模型能力接入」，当前可开票的只有两条：\n\n- **阿里云** → `providerId = prov-1794454203943-c57f`\n  - 源模型：`deepseek-v4.1-flash-1017`（src-1793927047458，运行中，usedSpend 0.00）\n- **世纪互联** → `providerId = prov-1794454203916-ebd7`\n  - 3 条源：`qwen3.8-flash`(0.0008)、`qwen3.8-max`(0.00)、`deepseek-v4.1-flash`(0.0744)\n  - ⚠️ `qwen3.8-flash`(src-1793947717110) 的 `serviceRef` 为空，即未绑定已创建服务，账单归属可能不完整，请到「源模型能力接入」核对该行的服务绑定。\n\n**未在此页出现过的供应商不可开票**，需要先接入源模型产生 provider 记录。\n\n## 第 3 步：补全 invoice 资料（二选一）\n\n- 网关侧：`PATCH {gateway}/providers/{providerId}`\n- MCP 侧：`create-invoice-supplier`，传 `providerId`\n\n必填字段示例（以阿里云为例）：\n\n```json\n{\n  \"providerId\": \"prov-1794454203943-c57f\",\n  \"invoiceTitle\": \"（营业执照全称）\",\n  \"taxNo\": \"（纳税人识别号）\",\n  \"invoiceEmail\": \"finance@example.com\",\n  \"bssAkRef\": \"（网关侧已托管的虚拟 Key 引用，勿在此粘贴真实 AK）\"\n}\n```\n\n说明：\n- `invoiceTitleId` 需先用 `ListInvoiceTitle` 在控制台查询抬头列表取得，再回填到 provider 上；快照中两家该字段均为空，正是 `invoiceReady=false` 的原因之一。\n- BSS AK 请通过网关/MCP 的凭据配置写入，使用平台侧虚拟 Key；**不要**把上游真实密钥贴到对话里。\n- 补全后应变为 `invoiceReady=true`。\n\n## 第 4 步：提交开票（字段示例，供你核对后自行在控制台执行）\n\n```json\n{\n  \"supplierId\": \"prov-1794454203943-c57f\",\n  \"InvoiceTitleId\": \"（来自 ListInvoiceTitle）\",\n  \"InvoiceCandidateIds\": [\"（来自 ListInvoiceCandidate，可多个）\"],\n  \"InvoiceType\": 0,\n  \"InvoiceMode\": 0\n}\n```\n\n字段规则：\n- `InvoiceType`：0 = 数电普票，1 = 数电专票\n- `InvoiceMode`：0 = 独立开票，1 = 合并开票\n- `Amount` 可省略；**跨账号独立开票时不要传 Amount**\n- `supplierId` 填的是网关 provider id（如 `prov-1794454203943-c57f`），不是云厂商内部 id\n\n---\n\n## 提交前核对清单\n\n1. ☐ 开票 API 健康检查恢复 `ok=true`\n2. ☐ 目标供应商在「源模型能力接入」中存在，且已绑定服务\n3. ☐ `invoiceReady=true`，抬头 / 税号 / 邮箱 / BSS AK 均已写入\n4. ☐ `InvoiceTitleId` 已从 `ListInvoiceTitle` 实际取得\n5. ☐ `InvoiceCandidateIds` 已从 `ListInvoiceCandidate` 实际取得（可开票金额以该接口返回为准，快照里的 `usedSpend` 仅作参考，不能直接当开票金额）\n6. ☐ 已确认控制台对应的开票申请状态\n\n我这边只是给出核对清单和字段格式，**不会也不能替你提交真实开票**。等 API 起来、两家供应商补全资料后，你把 `ListInvoiceTitle` / `ListInvoiceCandidate` 的实际返回贴给我（脱敏即可），我可以帮你拼参数核对。",
+              "reasoning_content": "The user says \"开票\" (invoice). Previous turn had an error. Now I should respond based on snapshot. Key facts: invoiceApiHealth.ok=false — local invoice API unavailable, need to start mcpserver API. Providers: 阿里云 prov-1794454203943-c57f invoiceReady=false; 世纪互联 prov-1794454203916-ebd7 invoiceReady=false. Neither has invoice title. So cannot invoice yet.\n\nI should explain: blocked because invoice API down, and providers not invoice-ready. Give steps and required fields, with examples. Cannot submit real invoice.\n\nLet me write a concise Chinese response with checklist.\n\nSteps:\n1. 启动本地开票 API (mcpserver) — 快照显示 http://127.0.0.1:3000 不可用 (Failed to fetch at 2026-11-12 11:33:22)。\n2. 供应商来自「源模型能力接入」：阿里云 (prov-1794454203943-c57f, sourceCount 1, src-1793927047458 deepseek-v4.1-flash-1017)；世纪互联 (prov-1794454203916-ebd7, sourceCount 3)。\n3. 补全 invoice 资料：PATCH 网关 providers 或 MCP create-invoice-supplier 传 providerId。必填：抬头 invoiceTitle、邮箱、BSS AK（平台侧虚拟 Key，不要粘贴真实密钥）。注意\"BSS AK\"——硬性流程说抬头/邮箱/BSS AK。但约束3说不要要求用户粘贴上游真实密钥；平台侧使用虚拟 Key。所以我应该提示 BSS AK 通过网关侧配置/虚拟 Key，不要贴在对话里。\n4. 先在控制台 ListInvoiceTitle 获取 InvoiceTitleId，ListInvoiceCandidate 获取候选单号。\n5. 开票参数示例 JSON。\n\nNote 阿里云 usedSpend 0.00, 世纪互联 sources usedSpend 0.0008/0.00/0.0744. 可开票金额需由 ListInvoiceCandidate 确认，不要编造。\n\nAlso note 阿里云 sourceCount 1 有 sourceRef svc-1793947715901 而另一个阿里云源的 serviceRef 是 svc-1793947715901... wait, src-1793947717110 世纪互联 sourceModel qwen3.8-flash serviceRef \"\" (empty) — 未绑定服务。可以提一句：世纪互联有一条源未绑定服务，可能影响账单归属。\n\nRecent call logs: 使用 deepseek-v4.1-flash-1017 via 运维助手 key. Cost 0.0752 total. But 可开票金额以 ListInvoiceCandidate 为准。\n\nKeep it structured, concise.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794454815,
+        "id": "021794454804608883864491a6b5ce3e32f094db667274340b619",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1766,
+          "prompt_tokens": 3237,
+          "total_tokens": 5003,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 588
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:40:16"
+    },
+    {
+      "id": "clog-1794454742209-46c874",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 35,
+      "completionTokens": 82,
+      "cachedTokens": 0,
+      "totalTokens": 117,
+      "cost": 0.000726,
+      "latencyMs": 2050,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "用两个字回答：你好"
+          }
+        ],
+        "stream": false,
+        "temperature": 0
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "你好",
+              "reasoning_content": "我们需要回答用户中文：“用两个字回答：你好”。要求用两个字回答。需要回答两个字。可能是“你好”本身两字？但问题是“用两个字回答：你好”。需要用两个字回答，内容可以是“你好”或者“您好”也是两字？ \"你好\" 是两个字（你、好）。所以回答“你好”。需要只给两个字。最终只需“你好”。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794454742,
+        "id": "02179445474037809fb6d9bae00304bb74f776328be18e9253d70",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 82,
+          "prompt_tokens": 35,
+          "total_tokens": 117,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 80
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:39:02"
+    },
+    {
+      "id": "clog-1794454732795-0699c1",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 34,
+      "completionTokens": 8,
+      "cachedTokens": 0,
+      "totalTokens": 42,
+      "cost": 0.000132,
+      "latencyMs": 1326,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "只回复：ok"
+          }
+        ],
+        "stream": false,
+        "max_tokens": 8
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "",
+              "reasoning_content": "The user wants only \"ok\" as",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794454732,
+        "id": "021794454731888883864491a6b5ce3e32f094db66727435df74e",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 8,
+          "prompt_tokens": 34,
+          "total_tokens": 42,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:38:52"
+    },
+    {
+      "id": "clog-1794454409082-3fb1a7",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 502,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "cachedTokens": 0,
+      "totalTokens": 0,
+      "cost": 0.0,
+      "latencyMs": 906,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 502
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 供应商列表同步自模型网关「源模型能力接入」；在那里接入阿里云源模型后即产生供应商。\n2) 开票前为该供应商补全 invoice 资料（抬头/邮箱/BSS AK）：PATCH 网关 providers 或 MCP create-invoice-supplier（传 providerId）。\n3) 开票时优先选择供应商（supplierId=网关 provider id），再传 InvoiceCandidateIds 与可选 Amount。\n4) 未在源模型接入中出现的供应商不可开票。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:33:22\"},\"generatedAt\":\"2026-11-12 11:33:28\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0744\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947715901\"}],\"providers\":[{\"id\":\"prov-1794454203943-c57f\",\"name\":\"阿里云\",\"vendor\":\"aliyun\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"sourceCount\":1,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"},{\"id\":\"prov-1794454203916-ebd7\",\"name\":\"世纪互联\",\"vendor\":\"other\",\"baseUrl\":\"https://neolink.com/api/v1\",\"sourceCount\":3,\"invoiceReady\":false,\"invoiceTitleId\":\"\",\"status\":\"运行中\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0650\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-12 11:14:42\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":4663,\"completionTokens\":750,\"cost\":0.015326,\"latencyMs\":8191},{\"time\":\"2026-11-12 11:06:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3964,\"completionTokens\":733,\"cost\":0.013792,\"latencyMs\":6468},{\"time\":\"2026-11-12 11:06:26\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2913,\"completionTokens\":1185,\"cost\":0.015306,\"latencyMs\":11573},{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:59\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:58\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":82,\"inTokens\":0.052222,\"outTokens\":0.004756,\"cost\":0.07521499999999999,\"rowCount\":8},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"14155\",\"usedOut\":\"4589\",\"usedSpend\":\"0.0650\"}}"
+          },
+          {
+            "role": "user",
+            "content": "按「源模型接入产生供应商 → 补全 invoice 资料 → create-invoice」说明步骤与必填字段"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "error": {
+          "message": "upstream request failed: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)",
+          "type": "upstream_unreachable"
+        },
+        "gateway": {
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 502
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:33:29"
+    },
+    {
+      "id": "clog-1794453282480-002da7",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 4663,
+      "completionTokens": 750,
+      "cachedTokens": 0,
+      "totalTokens": 5413,
+      "cost": 0.015326,
+      "latencyMs": 8191,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 必须先 POST /invoice-suppliers（或 MCP create-invoice-supplier）登记供应商；未添加供应商不可开票。\n2) 开票时优先选择供应商（supplierId）；抬头、邮箱、默认票种从供应商档案带出。\n3) 再调用 POST /invoices 或 MCP create-invoice，主要补充 InvoiceCandidateIds 与可选 Amount。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:14:24\"},\"generatedAt\":\"2026-11-12 11:14:34\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0591\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947715901\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0497\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-12 11:06:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":3964,\"completionTokens\":733,\"cost\":0.013792,\"latencyMs\":6468},{\"time\":\"2026-11-12 11:06:26\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2913,\"completionTokens\":1185,\"cost\":0.015306,\"latencyMs\":11573},{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:59\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:58\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:56\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":81,\"inTokens\":0.047559,\"outTokens\":0.004006000000000001,\"cost\":0.059889,\"rowCount\":8},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"9492\",\"usedOut\":\"3839\",\"usedSpend\":\"0.0497\"}}"
+          },
+          {
+            "role": "user",
+            "content": "说明开票前为何必须先添加并选择供应商（以阿里云为例），以及供应商档案应包含哪些字段"
+          },
+          {
+            "role": "assistant",
+            "content": "## 一、为什么必须先添加并选择供应商\n\n平台把「开票」拆成两层：**供应商档案**（谁在卖、开给谁、开什么票）和**开票申请**（这次开哪几笔）。先建档再开票，原因是：\n\n1. **开票接口的入参依赖供应商档案**\n   开票时 `POST /invoices` / MCP `create-invoice` 主要只需要 `InvoiceCandidateIds` 和可选 `Amount`；**发票抬头、接收邮箱、默认票种都是从 supplierId 对应的供应商档案带出的**。没有 supplierId，这些字段就没有来源，调用会缺少必填项。\n2. **`InvoiceCandidateIds` 是按供应商维度可选的**\n   候选账单来自 `ListInvoiceCandidate`。只有先登记了该供应商，它的可开票候选才会出现在列表里，你才能挑出要开的那几笔。\n3. **票种、抬头、模式一次确认，避免反复出错**\n   `InvoiceType`（0 数电普票 / 1 数电专票）、`InvoiceMode`（0 独立 / 1 合并）、`InvoiceTitleId`（来自 `ListInvoiceTitle`）都属于\"主体级\"信息，重复填容易填错，放在档案里做默认值更稳。\n4. **合规与对账**\n   供应商是开票主体和结算对象的绑定关系，先建档才能把\"消费来源—服务—供应商—发票\"串起来核对。\n\n---\n\n## 二、以阿里云为例（本快照中的实际数据）\n\n快照里阿里云这条来源：\n\n| 项 | 值 |\n|---|---|\n| 来源 ID | `src-1793927047458` |\n| 供应商 | 阿里云 |\n| 源模型 | `deepseek-v4.1-flash-1017` |\n| 接入地址 | `https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1` |\n| 关联服务 | `svc-1793947715901`（Qwen-Flash） |\n| 状态 | 运行中 |\n\n注意这里有个**容易踩坑的点**：阿里云这条来源的源模型是 `deepseek-v4.1-flash-1017`，但它关联的服务是 `Qwen-Flash`。所以添加阿里云供应商时，供应商名称/备注建议写得能区分来源，不要只写\"阿里云\"，否则后面两个阿里云来源无法区分。\n\n---\n\n## 三、供应商档案建议包含的字段\n\n**必填类（开票接口要用）**\n- 供应商名称（如：阿里云）\n- 发票抬头（对应 `InvoiceTitleId`，先通过 `ListInvoiceTitle` 取抬头列表再选）\n- 接收邮箱（电子发票送达地址）\n- 默认票种 `InvoiceType`：0 数电普票 / 1 数电专票\n- 默认开票模式 `InvoiceMode`：0 独立开票 / 1 合并开票\n\n**关联类（把档案和平台数据挂上）**\n- 关联来源 ID（`src-1793927047458`）\n- 关联服务 / serviceId（`svc-1793947715901`）\n- 接入地址 baseUrl（便于核对是不是同一渠道）\n- 供应商侧账号标识（用平台侧虚拟 Key，**不要粘贴上游真实密钥**）\n\n**辅助类（便于运维对账）**\n- 联系人、联系电话\n- 开票周期 / 结算方式备注\n- 备注（区分同一供应商下的不同来源或不同主体）\n- 创建人、创建时间\n\n---\n\n## 四、调用顺序（MCP 版）\n\n1. `create-invoice-supplier` 登记供应商 → 拿到 `supplierId`\n2. `ListInvoiceTitle` 取抬头 → 确认 `InvoiceTitleId`\n3. `ListInvoiceCandidate` 取候选 → 确认 `InvoiceCandidateIds`\n4. `create-invoice` 传 `supplierId` + `InvoiceCandidateIds`（+ 可选 `Amount`）\n\n**跨账号独立开票时不要传 `Amount`**，让系统按候选金额汇总。\n\n---\n\n## 五、当前环境提醒（重要）\n\n快照显示：`invoiceApiHealth.ok = false`，错误 `Failed to fetch`（2026-11-12 11:06:11），开票 API 地址为 `http://127.0.0.1:3000`。\n\n也就是说，**现在建档和开票调用都发不出去**。请先在控制台启动 mcpserver API，等健康检查变为 ok 后再操作。我这边不会替你在对话里直接提交真实开票——请按上面的字段清单准备，并在控制台确认申请状态后自行提交。"
+          },
+          {
+            "role": "user",
+            "content": "我要开阿里云的票，需要提供你哪些信息"
+          },
+          {
+            "role": "assistant",
+            "content": "## 结论先说\n\n开阿里云的票，分两步：**先登记供应商档案**，**再开票**。所以你要提供的信息也分两组。\n\n⚠️ 但当前快照显示 `invoiceApiHealth.ok = false`（`http://127.0.0.1:3000`，报 `Failed to fetch`），**现在调用发不出去**。请先在控制台启动 mcpserver API，等健康检查变 ok 再提交。\n\n---\n\n## 第一步：添加阿里云供应商（必填）\n\n| 信息 | 说明 | 快照中可对照的值 |\n|---|---|---|\n| 供应商名称 | 建议写能区分的名字 | 阿里云 |\n| 关联来源 | 对应哪条来源记录 | `src-1793927047458` |\n| 关联服务 | 该来源挂的服务 | `svc-1793947715901`（显示为 Qwen-Flash） |\n| 发票抬头 | 你要选的抬头，先 `ListInvoiceTitle` 拿 `InvoiceTitleId` | 需你提供/选择 |\n| 接收邮箱 | 电子发票送达 | 需你提供 |\n| 默认票种 `InvoiceType` | 0 数电普票 / 1 数电专票 | 需你确认 |\n| 默认开票模式 `InvoiceMode` | 0 独立 / 1 合并 | 需你确认 |\n\n**可选但建议给**：联系人、联系电话、开票周期/结算备注、档案备注。\n\n> 注意：阿里云这条来源的源模型是 `deepseek-v4.1-flash-1017`，但关联服务是 `Qwen-Flash`，两者不一致。所以供应商**别只写\"阿里云\"**，加个后缀区分，否则后面分不清是哪个来源的票。\n\n---\n\n## 第二步：开票（必填）\n\n| 信息 | 说明 |\n|---|---|\n| `supplierId` | 上一步建档返回的 ID |\n| `InvoiceCandidateIds` | 从 `ListInvoiceCandidate` 里勾选要开的那几笔 |\n| `Amount` | **可省略**；跨账号独立开票时不要传 |\n\n抬头、邮箱、票种都会从供应商档案自动带出，不用重复填。\n\n---\n\n## 现在你可以发我的\n\n1. 发票抬头（或告诉我去 `ListInvoiceTitle` 里选哪个）\n2. 接收邮箱\n3. 票种：0 普票 还是 1 专票\n4. 开票模式：0 独立 还是 1 合并\n5. 供应商名称想怎么写（建议\"阿里云-xxx\"区分）\n\n**不用发**：任何上游真实密钥、AK/SK。平台侧用虚拟 Key 即可。\n\n发我这些我帮你整理成待提交的字段示例；实际提交请你在控制台确认申请状态后自行操作。"
+          },
+          {
+            "role": "user",
+            "content": "开票"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 现在还开不了票，卡在两个地方\n\n### 1. 本地开票 API 不可用\n快照：`invoiceApiHealth.ok = false`，报错 `Failed to fetch`（2026-11-12 11:06:11），地址 `http://127.0.0.1:3000`。\n\n→ 请在控制台启动 mcpserver API，等健康检查变 `ok`。\n\n### 2. 前置流程未完成，且我看不到关键数据\n- 快照里**没有供应商列表**，无法确认阿里云供应商是否已登记、`supplierId` 是多少\n- 快照里**没有抬头列表和候选账单**，`InvoiceTitleId`、`InvoiceCandidateIds` 都拿不到\n- 阿里云那条来源的源模型是 `deepseek-v4.1-flash-1017`，但关联服务显示为 `Qwen-Flash`，需要你确认要开的是哪个口径\n\n按硬性流程：**未添加供应商不可开票**，我必须先确认建档这一步。\n\n---\n\n## 请按顺序核对\n\n**第 1 步：确认供应商已建档**\n在控制台查看供应商列表里是否有阿里云记录。\n- 有 → 记下 `supplierId`\n- 没有 → 先 `POST /invoice-suppliers`（MCP `create-invoice-supplier`），需要这些字段：\n\n```json\n{\n  \"name\": \"阿里云-<区分后缀>\",\n  \"invoiceTitleId\": \"<ListInvoiceTitle 里选的抬头>\",\n  \"email\": \"<接收邮箱>\",\n  \"invoiceType\": 0,\n  \"invoiceMode\": 0,\n  \"sourceRef\": \"src-1793927047458\",\n  \"serviceRef\": \"svc-1793947715901\"\n}\n```\n\n**第 2 步：取抬头**\n`ListInvoiceTitle` → 确认 `InvoiceTitleId`\n\n**第 3 步：取候选**\n`ListInvoiceCandidate`（按 supplierId 过滤）→ 勾出要开的 `InvoiceCandidateIds`\n\n**第 4 步：开票**\n`POST /invoices`（MCP `create-invoice`）\n\n```json\n{\n  \"supplierId\": \"<第1步的ID>\",\n  \"InvoiceCandidateIds\": [\"<候选1>\", \"<候选2>\"]\n}\n```\n\n- 抬头、邮箱、票种由 supplierId 自动带出，不用填\n- `Amount` **省略**；跨账号独立开票时不要传\n\n---\n\n## 现在需要你给我三个确认\n\n1. 阿里云供应商**是否已经添加过**？`supplierId` 是多少？\n2. 抬头和邮箱是什么（或告诉我 `ListInvoiceTitle` 里的哪一条）？\n3. 票种 0 普票 / 1 专票，模式 0 独立 / 1 合并？\n\nAPI 恢复后，你把上面 1–3 的信息补齐，我可以帮你整理成待提交的完整字段示例供你核对。真实开票我不会在对话里代提交，请你在控制台确认申请状态后自行操作。",
+              "reasoning_content": "用户只说\"开票\"。我需要基于快照判断：API 不健康，无法开票。同时缺少必要信息（供应商是否已添加、抬头、候选人等）。我应该说明不能直接提交，给出核对清单。\n\n快照里没有供应商列表、没有抬头列表、没有候选列表。invoiceApiHealth.ok=false。所以只能提示。\n\n要简洁。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794453282,
+        "id": "02179445327461309fb6d9bae00304bb74f776328be18e963ba7d",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 750,
+          "prompt_tokens": 4663,
+          "total_tokens": 5413,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 74
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:14:42"
+    },
+    {
+      "id": "clog-1794452817803-f40f60",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 3964,
+      "completionTokens": 733,
+      "cachedTokens": 0,
+      "totalTokens": 4697,
+      "cost": 0.013792,
+      "latencyMs": 6468,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 必须先 POST /invoice-suppliers（或 MCP create-invoice-supplier）登记供应商；未添加供应商不可开票。\n2) 开票时优先选择供应商（supplierId）；抬头、邮箱、默认票种从供应商档案带出。\n3) 再调用 POST /invoices 或 MCP create-invoice，主要补充 InvoiceCandidateIds 与可选 Amount。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:06:11\"},\"generatedAt\":\"2026-11-12 11:06:51\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0300\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947715901\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0206\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:59\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:58\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:56\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:55\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:54\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":79,\"inTokens\":0.040681999999999996,\"outTokens\":0.002088,\"cost\":0.030791000000000002,\"rowCount\":7},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"5528\",\"usedOut\":\"3106\",\"usedSpend\":\"0.0359\"}}"
+          },
+          {
+            "role": "user",
+            "content": "说明开票前为何必须先添加并选择供应商（以阿里云为例），以及供应商档案应包含哪些字段"
+          },
+          {
+            "role": "assistant",
+            "content": "## 一、为什么必须先添加并选择供应商\n\n平台把「开票」拆成两层：**供应商档案**（谁在卖、开给谁、开什么票）和**开票申请**（这次开哪几笔）。先建档再开票，原因是：\n\n1. **开票接口的入参依赖供应商档案**\n   开票时 `POST /invoices` / MCP `create-invoice` 主要只需要 `InvoiceCandidateIds` 和可选 `Amount`；**发票抬头、接收邮箱、默认票种都是从 supplierId 对应的供应商档案带出的**。没有 supplierId，这些字段就没有来源，调用会缺少必填项。\n2. **`InvoiceCandidateIds` 是按供应商维度可选的**\n   候选账单来自 `ListInvoiceCandidate`。只有先登记了该供应商，它的可开票候选才会出现在列表里，你才能挑出要开的那几笔。\n3. **票种、抬头、模式一次确认，避免反复出错**\n   `InvoiceType`（0 数电普票 / 1 数电专票）、`InvoiceMode`（0 独立 / 1 合并）、`InvoiceTitleId`（来自 `ListInvoiceTitle`）都属于\"主体级\"信息，重复填容易填错，放在档案里做默认值更稳。\n4. **合规与对账**\n   供应商是开票主体和结算对象的绑定关系，先建档才能把\"消费来源—服务—供应商—发票\"串起来核对。\n\n---\n\n## 二、以阿里云为例（本快照中的实际数据）\n\n快照里阿里云这条来源：\n\n| 项 | 值 |\n|---|---|\n| 来源 ID | `src-1793927047458` |\n| 供应商 | 阿里云 |\n| 源模型 | `deepseek-v4.1-flash-1017` |\n| 接入地址 | `https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1` |\n| 关联服务 | `svc-1793947715901`（Qwen-Flash） |\n| 状态 | 运行中 |\n\n注意这里有个**容易踩坑的点**：阿里云这条来源的源模型是 `deepseek-v4.1-flash-1017`，但它关联的服务是 `Qwen-Flash`。所以添加阿里云供应商时，供应商名称/备注建议写得能区分来源，不要只写\"阿里云\"，否则后面两个阿里云来源无法区分。\n\n---\n\n## 三、供应商档案建议包含的字段\n\n**必填类（开票接口要用）**\n- 供应商名称（如：阿里云）\n- 发票抬头（对应 `InvoiceTitleId`，先通过 `ListInvoiceTitle` 取抬头列表再选）\n- 接收邮箱（电子发票送达地址）\n- 默认票种 `InvoiceType`：0 数电普票 / 1 数电专票\n- 默认开票模式 `InvoiceMode`：0 独立开票 / 1 合并开票\n\n**关联类（把档案和平台数据挂上）**\n- 关联来源 ID（`src-1793927047458`）\n- 关联服务 / serviceId（`svc-1793947715901`）\n- 接入地址 baseUrl（便于核对是不是同一渠道）\n- 供应商侧账号标识（用平台侧虚拟 Key，**不要粘贴上游真实密钥**）\n\n**辅助类（便于运维对账）**\n- 联系人、联系电话\n- 开票周期 / 结算方式备注\n- 备注（区分同一供应商下的不同来源或不同主体）\n- 创建人、创建时间\n\n---\n\n## 四、调用顺序（MCP 版）\n\n1. `create-invoice-supplier` 登记供应商 → 拿到 `supplierId`\n2. `ListInvoiceTitle` 取抬头 → 确认 `InvoiceTitleId`\n3. `ListInvoiceCandidate` 取候选 → 确认 `InvoiceCandidateIds`\n4. `create-invoice` 传 `supplierId` + `InvoiceCandidateIds`（+ 可选 `Amount`）\n\n**跨账号独立开票时不要传 `Amount`**，让系统按候选金额汇总。\n\n---\n\n## 五、当前环境提醒（重要）\n\n快照显示：`invoiceApiHealth.ok = false`，错误 `Failed to fetch`（2026-11-12 11:06:11），开票 API 地址为 `http://127.0.0.1:3000`。\n\n也就是说，**现在建档和开票调用都发不出去**。请先在控制台启动 mcpserver API，等健康检查变为 ok 后再操作。我这边不会替你在对话里直接提交真实开票——请按上面的字段清单准备，并在控制台确认申请状态后自行提交。"
+          },
+          {
+            "role": "user",
+            "content": "我要开阿里云的票，需要提供你哪些信息"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 结论先说\n\n开阿里云的票，分两步：**先登记供应商档案**，**再开票**。所以你要提供的信息也分两组。\n\n⚠️ 但当前快照显示 `invoiceApiHealth.ok = false`（`http://127.0.0.1:3000`，报 `Failed to fetch`），**现在调用发不出去**。请先在控制台启动 mcpserver API，等健康检查变 ok 再提交。\n\n---\n\n## 第一步：添加阿里云供应商（必填）\n\n| 信息 | 说明 | 快照中可对照的值 |\n|---|---|---|\n| 供应商名称 | 建议写能区分的名字 | 阿里云 |\n| 关联来源 | 对应哪条来源记录 | `src-1793927047458` |\n| 关联服务 | 该来源挂的服务 | `svc-1793947715901`（显示为 Qwen-Flash） |\n| 发票抬头 | 你要选的抬头，先 `ListInvoiceTitle` 拿 `InvoiceTitleId` | 需你提供/选择 |\n| 接收邮箱 | 电子发票送达 | 需你提供 |\n| 默认票种 `InvoiceType` | 0 数电普票 / 1 数电专票 | 需你确认 |\n| 默认开票模式 `InvoiceMode` | 0 独立 / 1 合并 | 需你确认 |\n\n**可选但建议给**：联系人、联系电话、开票周期/结算备注、档案备注。\n\n> 注意：阿里云这条来源的源模型是 `deepseek-v4.1-flash-1017`，但关联服务是 `Qwen-Flash`，两者不一致。所以供应商**别只写\"阿里云\"**，加个后缀区分，否则后面分不清是哪个来源的票。\n\n---\n\n## 第二步：开票（必填）\n\n| 信息 | 说明 |\n|---|---|\n| `supplierId` | 上一步建档返回的 ID |\n| `InvoiceCandidateIds` | 从 `ListInvoiceCandidate` 里勾选要开的那几笔 |\n| `Amount` | **可省略**；跨账号独立开票时不要传 |\n\n抬头、邮箱、票种都会从供应商档案自动带出，不用重复填。\n\n---\n\n## 现在你可以发我的\n\n1. 发票抬头（或告诉我去 `ListInvoiceTitle` 里选哪个）\n2. 接收邮箱\n3. 票种：0 普票 还是 1 专票\n4. 开票模式：0 独立 还是 1 合并\n5. 供应商名称想怎么写（建议\"阿里云-xxx\"区分）\n\n**不用发**：任何上游真实密钥、AK/SK。平台侧用虚拟 Key 即可。\n\n发我这些我帮你整理成待提交的字段示例；实际提交请你在控制台确认申请状态后自行操作。",
+              "reasoning_content": "用户要开阿里云的票，问需要提供哪些信息。我应该基于快照给出清单。注意快照里阿里云来源：src-1793927047458，源模型 deepseek-v4.1-flash-1017，服务 svc-1793947715901 (Qwen-Flash)。invoiceApiHealth.ok=false，需要先启动API。\n\n给一个清单：先建档所需信息 + 开票所需信息。不要要求真实密钥。提醒健康检查不ok。\n\n简洁分步。也可以给字段示例 JSON。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794452817,
+        "id": "02179445281184509fb6d9bae00304bb74f776328be18e99471ce",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 733,
+          "prompt_tokens": 3964,
+          "total_tokens": 4697,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 112
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:06:57"
+    },
+    {
+      "id": "clog-1794452786936-1bd448",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 2913,
+      "completionTokens": 1185,
+      "cachedTokens": 0,
+      "totalTokens": 4098,
+      "cost": 0.015306,
+      "latencyMs": 11573,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的开票智能体。\n职责：协助财务/运维整理可开票金额，并指导「先添加供应商 → 再开票」。以阿里云为例对接本机开票 API / MCP。\n硬性流程：\n1) 必须先 POST /invoice-suppliers（或 MCP create-invoice-supplier）登记供应商；未添加供应商不可开票。\n2) 开票时优先选择供应商（supplierId）；抬头、邮箱、默认票种从供应商档案带出。\n3) 再调用 POST /invoices 或 MCP create-invoice，主要补充 InvoiceCandidateIds 与可选 Amount。\n开票要点：\n- InvoiceType：0 数电普票，1 数电专票；InvoiceMode：0 独立开票，1 合并开票。\n- InvoiceTitleId 来自 ListInvoiceTitle；InvoiceCandidateIds 来自 ListInvoiceCandidate。\n- Amount 可省略；跨账号独立开票时不要传 Amount。\n- 你不能在对话里直接替用户提交真实开票；给出核对清单与字段示例，提醒先确认控制台申请状态。\n- 若快照中 invoiceApiHealth.ok=true，提示本地开票 API 可用；否则需先启动 mcpserver API。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key、费用或发票号。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"invoiceApi\":\"http://127.0.0.1:3000\",\"invoiceApiHealth\":{\"ok\":false,\"error\":\"Failed to fetch\",\"at\":\"2026-11-12 11:06:11\"},\"generatedAt\":\"2026-11-12 11:06:15\",\"activeAgent\":\"invoice\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0300\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947715901\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0206\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-11 10:11:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"运维助手\",\"promptTokens\":2615,\"completionTokens\":1921,\"cost\":0.020598,\"latencyMs\":13871},{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:59\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:58\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:56\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:55\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:54\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":79,\"inTokens\":0.040681999999999996,\"outTokens\":0.002088,\"cost\":0.030791000000000002,\"rowCount\":7},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"2615\",\"usedOut\":\"1921\",\"usedSpend\":\"0.0206\"}}"
+          },
+          {
+            "role": "user",
+            "content": "说明开票前为何必须先添加并选择供应商（以阿里云为例），以及供应商档案应包含哪些字段"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 一、为什么必须先添加并选择供应商\n\n平台把「开票」拆成两层：**供应商档案**（谁在卖、开给谁、开什么票）和**开票申请**（这次开哪几笔）。先建档再开票，原因是：\n\n1. **开票接口的入参依赖供应商档案**\n   开票时 `POST /invoices` / MCP `create-invoice` 主要只需要 `InvoiceCandidateIds` 和可选 `Amount`；**发票抬头、接收邮箱、默认票种都是从 supplierId 对应的供应商档案带出的**。没有 supplierId，这些字段就没有来源，调用会缺少必填项。\n2. **`InvoiceCandidateIds` 是按供应商维度可选的**\n   候选账单来自 `ListInvoiceCandidate`。只有先登记了该供应商，它的可开票候选才会出现在列表里，你才能挑出要开的那几笔。\n3. **票种、抬头、模式一次确认，避免反复出错**\n   `InvoiceType`（0 数电普票 / 1 数电专票）、`InvoiceMode`（0 独立 / 1 合并）、`InvoiceTitleId`（来自 `ListInvoiceTitle`）都属于\"主体级\"信息，重复填容易填错，放在档案里做默认值更稳。\n4. **合规与对账**\n   供应商是开票主体和结算对象的绑定关系，先建档才能把\"消费来源—服务—供应商—发票\"串起来核对。\n\n---\n\n## 二、以阿里云为例（本快照中的实际数据）\n\n快照里阿里云这条来源：\n\n| 项 | 值 |\n|---|---|\n| 来源 ID | `src-1793927047458` |\n| 供应商 | 阿里云 |\n| 源模型 | `deepseek-v4.1-flash-1017` |\n| 接入地址 | `https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1` |\n| 关联服务 | `svc-1793947715901`（Qwen-Flash） |\n| 状态 | 运行中 |\n\n注意这里有个**容易踩坑的点**：阿里云这条来源的源模型是 `deepseek-v4.1-flash-1017`，但它关联的服务是 `Qwen-Flash`。所以添加阿里云供应商时，供应商名称/备注建议写得能区分来源，不要只写\"阿里云\"，否则后面两个阿里云来源无法区分。\n\n---\n\n## 三、供应商档案建议包含的字段\n\n**必填类（开票接口要用）**\n- 供应商名称（如：阿里云）\n- 发票抬头（对应 `InvoiceTitleId`，先通过 `ListInvoiceTitle` 取抬头列表再选）\n- 接收邮箱（电子发票送达地址）\n- 默认票种 `InvoiceType`：0 数电普票 / 1 数电专票\n- 默认开票模式 `InvoiceMode`：0 独立开票 / 1 合并开票\n\n**关联类（把档案和平台数据挂上）**\n- 关联来源 ID（`src-1793927047458`）\n- 关联服务 / serviceId（`svc-1793947715901`）\n- 接入地址 baseUrl（便于核对是不是同一渠道）\n- 供应商侧账号标识（用平台侧虚拟 Key，**不要粘贴上游真实密钥**）\n\n**辅助类（便于运维对账）**\n- 联系人、联系电话\n- 开票周期 / 结算方式备注\n- 备注（区分同一供应商下的不同来源或不同主体）\n- 创建人、创建时间\n\n---\n\n## 四、调用顺序（MCP 版）\n\n1. `create-invoice-supplier` 登记供应商 → 拿到 `supplierId`\n2. `ListInvoiceTitle` 取抬头 → 确认 `InvoiceTitleId`\n3. `ListInvoiceCandidate` 取候选 → 确认 `InvoiceCandidateIds`\n4. `create-invoice` 传 `supplierId` + `InvoiceCandidateIds`（+ 可选 `Amount`）\n\n**跨账号独立开票时不要传 `Amount`**，让系统按候选金额汇总。\n\n---\n\n## 五、当前环境提醒（重要）\n\n快照显示：`invoiceApiHealth.ok = false`，错误 `Failed to fetch`（2026-11-12 11:06:11），开票 API 地址为 `http://127.0.0.1:3000`。\n\n也就是说，**现在建档和开票调用都发不出去**。请先在控制台启动 mcpserver API，等健康检查变为 ok 后再操作。我这边不会替你在对话里直接提交真实开票——请按上面的字段清单准备，并在控制台确认申请状态后自行提交。",
+              "reasoning_content": "用户问的是流程解释：为什么必须先添加并选择供应商（阿里云为例），供应商档案应包含哪些字段。基于快照作答，不要编造。快照里阿里云来源：src-1793927047458，provider 阿里云，baseUrl aliyuncs.com/compatible-mode/v1，serviceRef svc-1793947715901（Qwen-Flash）。注意 invoiceApiHealth.ok=false，需先启动 mcpserver API。\n\n结构：1) 为什么必须先加供应商 2) 阿里云示例 3) 字段清单 4) 开票调用注意 5) 当前状态提醒。简洁中文，不编造发票号/Key/费用。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794452785,
+        "id": "02179445277753809fb6d9bae00304bb74f776328be18e971edd1",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1185,
+          "prompt_tokens": 2913,
+          "total_tokens": 4098,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 148
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-12 11:06:26"
+    },
+    {
+      "id": "clog-1794363060284-5e85c0",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794362971322",
+      "keyName": "运维助手",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 2615,
+      "completionTokens": 1921,
+      "cachedTokens": 0,
+      "totalTokens": 4536,
+      "cost": 0.020598,
+      "latencyMs": 13871,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "deepseek-v4.1-flash-1017",
+        "temperature": 0.2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是「康师傅企业模型网关」控制台内的运维助手。\n职责：协助管理员解读用量/费用、排查源与服务配置、解释虚拟 Key / AppId 鉴权，并给出可执行的改配建议。\n约束：\n1) 只能基于下方平台快照与用户问题作答；不确定就说明需要到哪一页核对。\n2) 不要编造不存在的服务名、Key 或费用数字。\n3) 不要要求用户粘贴上游供应商真实密钥；平台侧使用虚拟 Key。\n4) 建议用简洁中文，必要时给分步操作（对应控制台菜单名）。\n5) 若用户要改配置，给出建议步骤；你无法直接改库，除非用户在控制台自行操作。\n\n【平台快照 JSON】\n{\"gateway\":\"http://127.0.0.1:8787\",\"generatedAt\":\"2026-11-11 10:10:46\",\"services\":[{\"id\":\"svc-1793947715901\",\"serviceId\":\"qwen-flash\",\"name\":\"Qwen-Flash\",\"enabled\":true},{\"id\":\"svc-1793947713728\",\"serviceId\":\"qwen-max\",\"name\":\"Qwen-Max\",\"enabled\":true},{\"id\":\"svc-1793926765393\",\"serviceId\":\"deepseek-v4.1-flash-1017\",\"name\":\"Deepseek-V4.1-Flash\",\"enabled\":true}],\"sources\":[{\"id\":\"src-1793947717110\",\"sourceModel\":\"qwen3.8-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1469 ms\",\"usedSpend\":\"0.0008\",\"serviceRef\":\"svc-1793947715901\"},{\"id\":\"src-1793947715897\",\"sourceModel\":\"qwen3.8-max\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"2114 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793947713728\"},{\"id\":\"src-1793927643785\",\"sourceModel\":\"deepseek-v4.1-flash\",\"provider\":\"世纪互联\",\"status\":\"运行中\",\"baseUrl\":\"https://neolink.com/api/v1\",\"latency\":\"1150 ms\",\"usedSpend\":\"0.0094\",\"serviceRef\":\"svc-1793926765393\"},{\"id\":\"src-1793927047458\",\"sourceModel\":\"deepseek-v4.1-flash-1017\",\"provider\":\"阿里云\",\"status\":\"运行中\",\"baseUrl\":\"https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1\",\"latency\":\"708 ms\",\"usedSpend\":\"0.00\",\"serviceRef\":\"svc-1793926765393\"}],\"appKeys\":[{\"id\":\"key-1794362971322\",\"name\":\"运维助手\",\"mask\":\"ak_live_••••A852\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1794277390752\",\"name\":\"appid-e2e2\",\"mask\":\"ak_live_••••D435\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.00\"},{\"id\":\"key-1793933828700\",\"name\":\"测试\",\"mask\":\"ak_live_••••EBC0\",\"status\":\"健康\",\"services\":\"全部已创建服务\",\"usedSpend\":\"0.0091\"}],\"recentCallLogs\":[{\"time\":\"2026-11-10 10:23:54\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"appid-e2e3\",\"promptTokens\":62,\"completionTokens\":31,\"cost\":0.000372,\"latencyMs\":8664},{\"time\":\"2026-11-06 15:13:07\",\"status\":200,\"service\":\"qwen-flash\",\"source\":\"qwen3.8-flash\",\"key\":\"连通性探测\",\"promptTokens\":62,\"completionTokens\":29,\"cost\":0.000356,\"latencyMs\":1284},{\"time\":\"2026-11-06 11:13:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"测试\",\"promptTokens\":37909,\"completionTokens\":75,\"cost\":0.009141,\"latencyMs\":2245},{\"time\":\"2026-11-06 11:12:33\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"source\":\"deepseek-v4.1-flash\",\"key\":\"usage-smoke\",\"promptTokens\":34,\"completionTokens\":32,\"cost\":0.000324,\"latencyMs\":1353},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:04:27\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 11:01:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:52\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke2\"},{\"time\":\"2026-11-06 11:01:36\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 11:01:35\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"stream-smoke\"},{\"time\":\"2026-11-06 10:59:22\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:21\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:20\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:19\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:18\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:17\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:15\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:14\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:13\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:11\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:10\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:09\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:08\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:07\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:06\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:05\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:04\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:03\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:01\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:59:00\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:59\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:58\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:57\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:56\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:55\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:54\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"},{\"time\":\"2026-11-06 10:58:53\",\"status\":200,\"service\":\"deepseek-v4.1-flash-1017\",\"key\":\"测试\"}],\"usageBrief\":{\"requests\":78,\"inTokens\":0.038067,\"outTokens\":0.000167,\"cost\":0.010193,\"rowCount\":6},\"opsAssistantKey\":{\"billingDept\":\"平台运维\",\"id\":\"key-1794362971322\",\"mask\":\"ak_live_••••A852\",\"name\":\"运维助手\",\"serviceRefs\":[\"svc-1793947715901\",\"svc-1793947713728\",\"svc-1793926765393\"],\"status\":\"健康\",\"usedIn\":\"0\",\"usedOut\":\"0\",\"usedSpend\":\"0.00\"}}"
+          },
+          {
+            "role": "user",
+            "content": "总结当前模型服务、源模型与虚拟 Key 的健康情况"
+          }
+        ],
+        "stream": false
+      },
+      "responsePayload": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "## 一、整体结论\n\n当前快照显示整体**健康**：3 个模型服务全部启用，4 个源模型全部「运行中」，3 个虚拟 Key 全部「健康」。有几处**需要留意**但不属于故障（延迟偏高、个别源零消耗、日志里出现未登记的 Key 名）。\n\n---\n\n## 二、模型服务（3 个，全部启用）\n\n| 服务 | 名称 | 状态 | 绑定源数 |\n|---|---|---|---|\n| qwen-flash | Qwen-Flash | 启用 | 1 |\n| qwen-max | Qwen-Max | 启用 | 1 |\n| deepseek-v4.1-flash-1017 | Deepseek-V4.1-Flash | 启用 | 2 |\n\n⚠️ **qwen-flash / qwen-max 均为单源，无故障切换能力**；只有 Deepseek 服务是双源。\n\n---\n\n## 三、源模型（4 个，全部运行中）\n\n| 源模型 | 供应商 | 延迟 | 已用费用 | 归属服务 |\n|---|---|---|---|---|\n| qwen3.8-flash | 世纪互联 | 1469 ms | 0.0008 | qwen-flash |\n| qwen3.8-max | 世纪互联 | **2114 ms** | 0.00 | qwen-max |\n| deepseek-v4.1-flash | 世纪互联 | 1150 ms | 0.0094 | deepseek-v4.1-flash-1017 |\n| deepseek-v4.1-flash-1017 | 阿里云 | **708 ms**（最快） | 0.00 | deepseek-v4.1-flash-1017 |\n\n观察点：\n- **qwen3.8-max 延迟最高（2.1s）且消耗为 0**，说明该服务近期基本没被调用过。\n- **阿里云源（708ms）零消耗**，而实际流量都走了世纪互联源（0.0094），说明路由没有按延迟优先，或备用源未被命中。可在「服务管理 → 源模型」确认两者的权重/优先级。\n- 4 源合计消耗 ≈ 0.0102，与用量汇总 cost 0.010193 吻合，计费侧未见异常。\n\n---\n\n## 四、虚拟 Key（3 个，全部健康）\n\n| 名称 | 掩码 | 状态 | 已用费用 | 授权范围 |\n|---|---|---|---|---|\n| 运维助手 | ak_live_••••A852 | 健康 | 0.00 | 全部已创建服务 |\n| appid-e2e2 | ak_live_••••D435 | 健康 | 0.00 | 全部已创建服务 |\n| 测试 | ak_live_••••EBC0 | 健康 | 0.0091 | 全部已创建服务 |\n\n观察点：\n- 三个 Key 均是**「全部已创建服务」的全量授权**，最小权限不足；生产 Key 建议只勾选需要的服务。\n- 「测试」Key 承担了绝大部分消耗（0.0091/0.0102，约 89%），且日志里有一条 **promptTokens=37909** 的大请求，属于测试 Key 打大报文，成本控制上建议拆分开。\n- 日志中出现 **appid-e2e3、连通性探测、usage-smoke、stream-smoke/stream-smoke2** 等 Key 名，但快照的 Key 列表里只有 3 个。可能是已删除的临时 Key 历史记录，若不希望继续产生调用，请到「虚拟 Key」页核对是否仍有残留或已吊销。\n\n---\n\n## 五、用量与日志侧提示\n\n- 汇总：78 次请求，cost 0.010193，涉及 6 行统计；inTokens 0.038067 / outTokens 0.000167 —— **输入输出 token 量级差约 200 倍**，口径疑似按「千 token」或分项统计，建议在「用量统计」页核对单位后再做成本核算。\n- **2026-11-10 10:23:54 那次 qwen-flash 调用耗时 8664 ms**，远高于该源 1469ms 的平均值，是唯一一次明显慢请求，值得回查。\n- 快照生成时间 2026-11-11 10:10，但**最近一条调用日志停在 11-10 10:23**，即近 24 小时无新调用，属正常静默，不代表链路故障；如需确认可用性可做一次连通性探测。\n\n---\n\n## 六、建议动作（按优先级）\n\n1. **给 qwen-flash、qwen-max 增加备用源**：服务管理 → 选择服务 → 绑定源模型，避免单源故障导致服务不可用。\n2. **调整 Deepseek 双源路由**：服务管理 → 源模型，确认阿里云源（708ms）的权重/优先级，让快源真正参与分流。\n3. **收窄 Key 权限**：虚拟 Key → 编辑 → 服务范围由「全部已创建服务」改为按需勾选；并给测试类 Key 设置配额上限。\n4. **核对未知 Key**：虚拟 Key 页检查 appid-e2e3 等是否仍存在，不再使用则吊销。\n5. **排查慢请求**：调用日志 → 定位 11-10 10:23:54 那条，看是否为长 prompt（该次 prompt 62 tokens，属上行/网络抖动可能性大）。\n6. **确认 token 口径**：用量统计页核对 in/out tokens 单位，再据此做成本预算。\n\n> 说明：快照不含配额上限、限流策略、错误率（全部日志为 200）等信息，若需评估容量与 SLO，需要到「用量统计 / 调用日志」页按时间区间再拉一次明细。",
+              "reasoning_content": "用户要求总结健康情况。基于快照。\n\n服务：3个，全部 enabled true。\n源：4个，全部\"运行中\"，延迟 708-2114ms。\n虚拟Key：3个，全部\"健康\"，usedSpend 0/0/0.0091。\n运维助手 Key 健康，usedSpend 0.00。\n\n需要注意的点：\n- 延迟：qwen3.8-max 2114ms 最高，deepseek-v4.1-flash-1017(阿里云) 708ms 最快。\n- deepseek-v4.1-flash-1017 服务下有两个源（世纪互联 deepseek-v4.1-flash 与 阿里云 deepseek-v4.1-flash-1017），构成多源；而 qwen 两个服务各只有一个源，无备份。\n- 计费：总 cost 0.010193，78 次请求；outTokens 0.000167 看起来异常小（可能是单位/统计口径问题，或者只统计部分）。实际上 inTokens 0.038067 也是\"千 token\"? 不确定。可以指出口径需核对。\n- appKeys 中的 key 都是\"全部已创建服务\"，权限范围较宽，建议收窄。\n- 调用日志里出现 key \"appid-e2e3\"、\"连通性探测\"、\"usage-smoke\"、\"stream-smoke\" 等不在 appKeys 列表中的名称，说明这些可能是已删除/临时 key 或日志中的历史名称，需要核对。\n- 有一条 8664ms 延迟的调用（2026-11-10 10:23:54），显著高于源延迟，值得关注。\n- 最近 11-10 之后没有新日志（generatedAt 11-11 10:10），即近一天无调用。\n- 源 usedSpend：0.0008、0.00、0.0094、0.00 → 合计 0.0102，与 usageBrief cost 0.010193 大致吻合。可以指出 qwen-max 源 与 阿里云源 无消耗（阿里云源可能未被路由到，或仅备用）。\n\n源与服务的映射：qwen-flash ← qwen3.8-flash；qwen-max ← qwen3.8-max；deepseek-v4.1-flash-1017 ← 两个源。\n\n建议：\n1. 为 qwen-flash/qwen-max 增加备用源（在\"服务管理/源模型\"里绑定）。\n2. 关注 qwen3.8-max 延迟 2114ms。\n3. 收窄 Key 的服务范围 / 按应用拆分。\n4. 核对 appid-e2e3 等未知 key 来源。\n5. 排查 8664ms 那次调用。\n\n不确定说明：快照不含配额、限流、错误率信息；token 单位口径需在\"用量统计\"页核对。\n\n格式：分几个小节，简洁。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1794363060,
+        "id": "02179436304713680c56aa2c9b300d5cdd78b61f7b93dd6ff33e8",
+        "model": "deepseek-v4-1-flash-261017",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1921,
+          "prompt_tokens": 2615,
+          "total_tokens": 4536,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 633
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "deepseek-v4.1-flash",
+          "serviceId": "deepseek-v4.1-flash-1017",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793927643785",
+              "sourceModel": "deepseek-v4.1-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-11 10:11:00"
+    },
+    {
+      "id": "clog-1794277434621-d420fb",
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1794277425841",
+      "keyName": "appid-e2e3",
+      "model": "qwen-flash",
+      "serviceId": "qwen-flash",
+      "serviceRef": "svc-1793947715901",
+      "mode": "upstream",
+      "purpose": "",
+      "sourceId": "src-1793947717110",
+      "sourceModel": "qwen3.8-flash",
+      "sourceName": "qwen3.8-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "route": "/v1/chat/completions",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 62,
+      "completionTokens": 31,
+      "cachedTokens": 0,
+      "totalTokens": 93,
+      "cost": 0.000372,
+      "latencyMs": 8664,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793947717110",
+          "sourceModel": "qwen3.8-flash",
+          "status": 200
+        }
+      ],
+      "requestPayload": {
+        "model": "qwen-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "hi"
+          }
+        ]
+      },
+      "responsePayload": {
+        "id": "chatcmpl-a2d39284-1951-9030-910a-545ecb05a875",
+        "object": "chat.completion",
+        "created": 1794277433,
+        "model": "qwen3.8-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "reasoning_content": "We need to respond to user \"hi\". Simple greeting. Need final answer. Keep concise.",
+              "content": "Hi! How can I help you today?"
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 62,
+          "total_tokens": 93,
+          "completion_tokens": 31,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 62
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 19,
+            "text_tokens": 31
+          }
+        },
+        "gateway": {
+          "mode": "upstream",
+          "sourceModel": "qwen3.8-flash",
+          "serviceId": "qwen-flash",
+          "routing": "fixed",
+          "failoverAttempts": [
+            {
+              "sourceId": "src-1793947717110",
+              "sourceModel": "qwen3.8-flash",
+              "status": 200
+            }
+          ]
+        }
+      },
+      "files": [],
+      "time": "2026-11-10 10:23:54"
+    },
+    {
+      "id": "clog-1793949187080-a209a2",
+      "audience": "probe",
+      "env": "prod",
+      "keyId": "",
+      "keyName": "连通性探测",
+      "model": "qwen-flash",
+      "serviceId": "qwen-flash",
+      "serviceRef": "svc-1793947715901",
+      "mode": "probe",
+      "purpose": "upstream_connectivity_probe",
+      "sourceId": "src-1793947717110",
+      "sourceModel": "qwen3.8-flash",
+      "sourceName": "qwen3.8-flash",
+      "provider": "世纪互联",
+      "routing": "probe",
+      "route": "/admin/sources/probe",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 62,
+      "completionTokens": 29,
+      "cachedTokens": 0,
+      "totalTokens": 91,
+      "cost": 0.000356,
+      "latencyMs": 1284,
+      "failoverAttempts": [],
+      "requestPayload": {
+        "model": "qwen3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "ping"
+          }
+        ],
+        "max_tokens": 1,
+        "stream": false
+      },
+      "responsePayload": {
+        "id": "chatcmpl-fc844fb9-a219-9dfd-bf76-c610c0184451",
+        "object": "chat.completion",
+        "created": 1793949186,
+        "model": "qwen3.8-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "reasoning_content": "The user said \"ping\" which is a common test message. I should respond with \"pong\" as is the traditional response.",
+              "content": ""
+            },
+            "finish_reason": "length",
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 62,
+          "total_tokens": 91,
+          "completion_tokens": 29,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 62
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 26,
+            "text_tokens": 29
+          }
+        }
+      },
+      "files": [],
+      "time": "2026-11-06 15:13:07"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "status": 200,
+      "stream": true,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "promptTokens": 37909,
+      "completionTokens": 75,
+      "cachedTokens": 37376,
+      "totalTokens": 37984,
+      "cost": 0.009141,
+      "latencyMs": 2245,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "time": "2026-11-06 11:13:09"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793934751805",
+      "keyName": "usage-smoke",
+      "model": "deepseek-v4.1-flash-1017",
+      "serviceId": "deepseek-v4.1-flash-1017",
+      "serviceRef": "svc-1793926765393",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "sourceModel": "deepseek-v4.1-flash",
+      "sourceName": "deepseek-v4.1-flash",
+      "provider": "世纪互联",
+      "routing": "fixed",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "promptTokens": 34,
+      "completionTokens": 32,
+      "cachedTokens": 0,
+      "totalTokens": 66,
+      "cost": 0.000324,
+      "latencyMs": 1353,
+      "failoverAttempts": [
+        {
+          "sourceId": "src-1793927643785",
+          "sourceModel": "deepseek-v4.1-flash",
+          "status": 200
+        }
+      ],
+      "time": "2026-11-06 11:12:33"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "stream": true,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 11:04:27"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "stream": true,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 11:04:27"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793934111702",
+      "keyName": "stream-smoke2",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "stream": true,
+      "userId": "",
+      "time": "2026-11-06 11:01:53"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793934111702",
+      "keyName": "stream-smoke2",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "time": "2026-11-06 11:01:52"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793934093607",
+      "keyName": "stream-smoke",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "stream": true,
+      "userId": "",
+      "time": "2026-11-06 11:01:36"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793934093607",
+      "keyName": "stream-smoke",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "stream": false,
+      "userId": "",
+      "time": "2026-11-06 11:01:35"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:22"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:21"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:20"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:19"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:18"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:17"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:17"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:15"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:14"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:14"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:13"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:11"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:11"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:10"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:09"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:08"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:07"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:06"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:05"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:04"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:03"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:01"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:59:00"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:59"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:58"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:57"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:56"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:55"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:54"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:53"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:52"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:51"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:51"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:50"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:49"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:48"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:47"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:46"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:45"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:44"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:43"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:42"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:42"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:41"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:40"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:39"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:38"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:37"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:37"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:36"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:36"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:35"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:34"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:33"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:32"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:31"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:30"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:29"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:29"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:28"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:27"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:26"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:25"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:24"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:24"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:23"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "c74323dc-88c8-4346-8748-2bc498d30c44",
+      "time": "2026-11-06 10:58:22"
+    },
+    {
+      "audience": "app",
+      "env": "prod",
+      "keyId": "key-1793933828700",
+      "keyName": "测试",
+      "model": "deepseek-v4.1-flash-1017",
+      "mode": "upstream",
+      "sourceId": "src-1793927643785",
+      "routing": "fixed",
+      "status": 200,
+      "userId": "",
+      "time": "2026-11-06 10:57:53"
+    }
+  ],
+  "providers": [
+    {
+      "id": "prov-1794454203943-c57f",
+      "name": "阿里云",
+      "protocol": "OpenAI · Chat Completions",
+      "baseUrl": "https://ws-b34vn9zze47y0w8m.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "apiKey": "sk-ws-H.YRLLYXL.7lG4.MEQCIH133ckLYU3bGVYFWqj1VfVtAL77yg_CotjRwxetFkGLAiAAwEvKj1Ruus6MHtTxbn1ZIBPFczypD7aFTbo5rWs6zQ",
+      "region": "华东（上海）",
+      "timeout": 30,
+      "concurrency": 500,
+      "retries": 2,
+      "circuit": 5,
+      "healthCheck": "每 30 秒",
+      "status": "运行中",
+      "created": "2026-11-12 11:30:03"
+    },
+    {
+      "id": "prov-1794454203916-ebd7",
+      "name": "世纪互联",
+      "protocol": "OpenAI · Chat Completions",
+      "baseUrl": "https://neolink.com/api/v1",
+      "apiKey": "sk-zobQEUJiWr3EHsjGUrtbkWenvjhvbpt75tm875EYe9dvussG",
+      "region": "??(??)",
+      "timeout": 30,
+      "concurrency": 500,
+      "retries": 2,
+      "circuit": 5,
+      "healthCheck": "每 30 秒",
+      "status": "运行中",
+      "created": "2026-11-12 11:30:03"
+    }
+  ]
+}

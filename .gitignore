@@ -1,0 +1,31 @@
+# secrets & local env
+.env
+.env.local
+*.pem
+*.key
+!server/.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# local runtime / caches
+*.log
+.DS_Store
+Thumbs.db
+docs/frd-shots/edge-profile/
+docs/frd-shots/edge-profile2/
+docs/frd-shots/edge-profile*/
+
+# large local archives / temp
+*.tar.gz
+outputs/
+qa_product_doc/
+
+# editor
+.idea/
+.vscode/
+*.swp
