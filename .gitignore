@@ -16,14 +16,25 @@ venv/
 *.log
 .DS_Store
 Thumbs.db
-docs/frd-shots/edge-profile/
-docs/frd-shots/edge-profile2/
-docs/frd-shots/edge-profile*/
+
+# 说明书 / 调研 / 文档产物（不入库，仅保留项目代码）
+*.docx
+*.xlsx
+*.pdf
+docs/
+outputs/
+qa_product_doc/
+AI六层架构*.png
+_inspect_srs*.py
+_write_srs*.py
+_build_frd*.py
+build_product_doc.py
+render_pdf_pages.py
+**/产品使用手册.md
+**/Rynnova*.pdf
 
 # large local archives / temp
 *.tar.gz
-outputs/
-qa_product_doc/
 
 # editor
 .idea/
