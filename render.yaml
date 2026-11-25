@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: model-gateway
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r server/requirements.txt gunicorn
+    startCommand: cd server && gunicorn -b 0.0.0.0:$PORT -w 2 --threads 4 cloud_app:app
+    envVars:
+      - key: GATEWAY_ENV
+        value: prod
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.12.0"

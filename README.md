@@ -75,8 +75,33 @@ Content-Type: application/json
 {"model":"demo-chat","messages":[{"role":"user","content":"你好"}]}
 ```
 
+## 云部署（单端口：控制台 + 网关）
+
+本地双端口（8765 / 8787 / 8788）在云上会合并为平台分配的一个 `PORT`。
+
+### Render（推荐免费试用）
+
+1. 打开：[Deploy to Render](https://render.com/deploy?repo=https://github.com/ksf-lichen/model-gateway)
+2. 使用 GitHub 登录并授权本仓库
+3. 按 `render.yaml` 创建 Web Service，部署完成后得到公网 URL
+
+手动创建时：
+- Build：`pip install -r server/requirements.txt gunicorn`
+- Start：`cd server && gunicorn -b 0.0.0.0:$PORT -w 2 --threads 4 cloud_app:app`
+- 环境变量：`GATEWAY_ENV=prod`，`ADMIN_TOKEN`（自设）
+
+### Docker
+
+```bash
+docker build -t model-gateway .
+docker run -p 8787:8787 -e ADMIN_TOKEN=local-dev-token model-gateway
+```
+
 ## 目录
 
 - `dist/` — 控制台静态页  
 - `server/` — 网关 + Admin API（JSON 持久化于 `server/data/store.json`）  
+- `server/cloud_app.py` — 云上单端口入口（静态页 + API）  
 - `start-gateway.ps1` — 一键启动脚本  
+- `Dockerfile` / `render.yaml` / `Procfile` — 云部署配置  
+
